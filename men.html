@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>男性向け求人 | 株式会社ZENITH</title>
+<meta name="description" content="株式会社ZENITHの男性向け求人。ホスト・黒服・店長候補など、ナイトワーク業界で活躍したい男性へ高収入・キャリアアップ・独立支援まで対応した求人をご紹介します。" />
+<meta name="keywords" content="男性,求人,ナイトワーク,ホスト,メンズキャバ,黒服,ボーイ,店長候補,マネージャー,スカウト,送迎ドライバー,高収入,独立支援,職業紹介" />
+
+<!-- OGP -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="男性向け求人 | 株式会社ZENITH" />
+<meta property="og:description" content="ホスト・黒服・店長候補など、ナイトワーク業界で活躍したい男性へ最適な求人をご提案。未経験からの挑戦も、独立支援まで、ZENITHが全面サポートします。" />
+<meta property="og:site_name" content="株式会社ZENITH" />
+<meta name="theme-color" content="#2FA9E0" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css" />
+
+<link rel="icon" href="assets/images/logo.png" />
+
+<!-- Page-scoped styles -->
+<style>
+  /* ==== Sub-page hero (shorter than top) ==== */
+  body.page-men .subhero {
+    position: relative;
+    padding-top: calc(var(--nav-h) + 48px);
+    padding-bottom: clamp(48px, 7vw, 88px);
+    background:
+      radial-gradient(800px 400px at 90% -10%, #CFE8F6 0%, transparent 60%),
+      radial-gradient(700px 380px at 5% 110%, #E8F2D9 0%, transparent 60%),
+      linear-gradient(180deg, #F5FAFD 0%, #FFFFFF 100%);
+    overflow: hidden;
+  }
+  body.page-men .subhero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: var(--damask);
+    background-size: 110px 110px;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+  body.page-men .subhero__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  body.page-men .subhero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: var(--r-pill);
+    background: #fff;
+    border: 1px solid var(--c-border);
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: var(--c-primary-dark);
+    box-shadow: var(--sh-xs);
+    margin-bottom: 22px;
+  }
+  body.page-men .subhero__eyebrow .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--c-primary);
+    box-shadow: 0 0 0 4px rgba(47,169,224,0.18);
+  }
+  body.page-men .subhero__title {
+    font-size: clamp(26px, 4.4vw, 44px);
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    color: var(--c-ink);
+    margin-bottom: 20px;
+  }
+  body.page-men .subhero__title .accent-primary { color: var(--c-primary-dark); }
+  body.page-men .subhero__sub {
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: var(--c-ink-2);
+    line-height: 2;
+    margin-bottom: 26px;
+    max-width: 540px;
+  }
+  body.page-men .subhero__ctas {
+    display: flex; flex-wrap: wrap; gap: 14px;
+  }
+  body.page-men .subhero__cert {
+    position: relative; z-index: 1;
+    justify-self: center; width: 100%;
+    max-width: 420px;
+  }
+
+  /* ==== Hero photo (single) with badge ==== */
+  body.page-men .subhero__photo {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 5 / 4;
+    margin-inline: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 24px 48px -18px rgba(47,169,224,0.35), 0 10px 24px -14px rgba(232,169,61,0.25);
+    border: 4px solid #fff;
+  }
+  body.page-men .subhero__photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  body.page-men .subhero__photo-badge {
+    position: absolute;
+    bottom: 16px; left: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #F3CB7A, #E8A93D);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    box-shadow: 0 10px 24px -10px rgba(232,169,61,0.55);
+  }
+  body.page-men .subhero__photo-badge .material-symbols-rounded { font-size: 18px; }
+
+  /* ==== Job-type chip row ==== */
+  body.page-men .jobtypes {
+    display: flex; flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  body.page-men .jobtypes .chip {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  body.page-men .jobtypes-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--c-ink-3);
+    margin-top: 24px;
+  }
+
+  /* ==== Testimonial card customization ==== */
+  body.page-men .testimonial {
+    display: flex; flex-direction: column;
+    gap: 16px;
+    position: relative;
+    height: 100%;
+  }
+  body.page-men .testimonial__quote-mark {
+    font-family: var(--ff-en);
+    font-size: 56px;
+    line-height: 1;
+    color: var(--c-primary);
+    opacity: 0.5;
+    font-weight: 700;
+  }
+  body.page-men .testimonial__body {
+    font-size: 14px;
+    line-height: 1.95;
+    color: var(--c-ink-2);
+  }
+  body.page-men .testimonial__foot {
+    display: flex; align-items: center; gap: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--c-border-soft);
+    margin-top: auto;
+  }
+  body.page-men .testimonial__avatar {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: var(--ff-en);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #7AC5E6, var(--c-primary));
+    box-shadow: 0 6px 16px -8px rgba(47,169,224,0.4);
+  }
+  body.page-men .testimonial__avatar--1 { background: linear-gradient(135deg, #7AC5E6, var(--c-primary)); }
+  body.page-men .testimonial__avatar--2 { background: linear-gradient(135deg, #F3CB7A, var(--c-gold)); }
+  body.page-men .testimonial__avatar--3 { background: linear-gradient(135deg, #F6AEAE, var(--c-coral)); }
+  body.page-men .testimonial__name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-ink);
+    letter-spacing: 0.06em;
+  }
+  body.page-men .testimonial__meta {
+    font-size: 12px;
+    color: var(--c-ink-3);
+  }
+
+  /* ==== Benefits 4-grid row (2x2 on larger, 1col on mobile) ==== */
+  body.page-men .benefits .card {
+    text-align: left;
+  }
+  body.page-men .benefits .card__icon {
+    margin-inline: 0;
+  }
+
+  /* Responsive overrides */
+  @media (max-width: 1024px) {
+    body.page-men .subhero__inner { grid-template-columns: 1fr; }
+    body.page-men .subhero__cert { max-width: 420px; margin-inline: auto; }
+  }
+  @media (max-width: 768px) {
+    body.page-men .subhero__ctas .btn { flex: 1 1 auto; }
+  }
+</style>
+</head>
+<body class="page-men">
+
+<!-- =========================================================================
+     Navbar
+     ========================================================================= -->
+<header class="navbar" role="banner">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="株式会社ZENITH トップページ">
+      <img src="assets/images/logo.png" alt="株式会社ZENITH" class="navbar__logo-img" />
+      <span class="navbar__wordmark">
+        <span class="navbar__wordmark-en">ZENITH</span>
+        <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+      </span>
+    </a>
+
+    <nav class="navbar__menu" aria-label="メインナビゲーション">
+      <a href="index.html#services" class="navbar__link">事業内容</a>
+      <a href="index.html#flow" class="navbar__link">ご利用の流れ</a>
+      <a href="company.html" class="navbar__link">会社概要</a>
+      <a href="contact.html" class="navbar__link">お問い合わせ</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn--primary navbar__cta">
+      <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+      お問い合わせ
+    </a>
+
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+      <span class="hamburger__box" aria-hidden="true">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </span>
+    </button>
+  </div>
+</header>
+
+<!-- Drawer (mobile) -->
+<div class="drawer-backdrop" aria-hidden="true"></div>
+<aside id="drawer" class="drawer" aria-label="モバイルメニュー">
+  <div class="drawer__head">
+    <span class="navbar__wordmark">
+      <span class="navbar__wordmark-en">ZENITH</span>
+      <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+    </span>
+    <button class="drawer__close" type="button" aria-label="メニューを閉じる">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+  </div>
+  <nav class="drawer__menu" aria-label="モバイルナビゲーション">
+    <a href="index.html#services" class="drawer__link"><span class="material-symbols-rounded">business_center</span>事業内容</a>
+    <a href="index.html#flow" class="drawer__link"><span class="material-symbols-rounded">timeline</span>ご利用の流れ</a>
+    <a href="company.html" class="drawer__link"><span class="material-symbols-rounded">apartment</span>会社概要</a>
+    <a href="contact.html" class="drawer__link"><span class="material-symbols-rounded">mail</span>お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--primary btn--block drawer__cta">
+    <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+    お問い合わせ
+  </a>
+</aside>
+
+<main id="main">
+
+<!-- =========================================================================
+     Sub-page Hero
+     ========================================================================= -->
+<section class="subhero" aria-label="ページヘッダー">
+  <div class="container subhero__inner">
+    <div class="subhero__content">
+      <span class="subhero__eyebrow reveal">
+        <span class="dot" aria-hidden="true"></span>
+        <span>FOR MEN</span>
+      </span>
+      <h1 class="subhero__title reveal reveal--delay-1">
+        高みを目指す男性へ、<br />
+        <span class="accent-primary">確かなキャリア</span>を。
+      </h1>
+      <p class="subhero__sub reveal reveal--delay-2">
+        ホスト・黒服・店長候補など、ナイトワーク業界で活躍したい男性へ最適な求人をご提案。<br />
+        未経験からの挑戦も、キャリアアップも、<br />
+        ZENITHが全面サポートします。
+      </p>
+
+      <div class="subhero__ctas reveal reveal--delay-4">
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          <span class="material-symbols-rounded" aria-hidden="true">edit_note</span>
+          無料相談を申し込む
+        </a>
+        <a href="#categories" class="btn btn--outline btn--lg">
+          <span class="material-symbols-rounded" aria-hidden="true">work</span>
+          求人カテゴリを見る
+        </a>
+      </div>
+    </div>
+
+    <div class="subhero__cert reveal reveal--delay-2">
+      <div class="subhero__photo">
+        <img src="assets/images/people/office-business.jpg" alt="オフィスで打ち合わせをするビジネスシーン" loading="eager" />
+        <span class="subhero__photo-badge">
+          <span class="material-symbols-rounded" aria-hidden="true">workspace_premium</span>
+          高収入・独立支援あり
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ② ZENITHを選ぶメリット
+     ========================================================================= -->
+<section class="section section--alt benefits" id="benefits" aria-labelledby="benefits-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Why ZENITH</span>
+      <h2 id="benefits-title" class="section__title reveal reveal--delay-1">
+        ZENITHを選ぶ<span>4つのメリット</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        未経験からの初挑戦も、トップを目指すキャリアアップも。<br />
+        ナイトワーク業界で働く男性お一人おひとりに寄り添い、最適な就業をサポートいたします。
+      </p>
+    </header>
+
+    <div class="grid grid--4">
+      <article class="card card--trust reveal">
+        <div class="card__icon"><span class="material-symbols-rounded">payments</span></div>
+        <h3 class="card__title">業界最高水準の報酬帯</h3>
+        <p class="card__body">ホスト・店長候補など、実力が収入に直結する高報酬ポジションを多数取扱。歩合・月給問わず、納得の条件をご提案します。</p>
+      </article>
+
+      <article class="card card--trust reveal reveal--delay-1">
+        <div class="card__icon"><span class="material-symbols-rounded">trending_up</span></div>
+        <h3 class="card__title">未経験からのキャリア構築</h3>
+        <p class="card__body">研修・OJT付き求人をご紹介。初心者から業界トップまでの道筋を描けるよう、段階的なキャリア形成を後押しします。</p>
+      </article>
+
+      <article class="card card--trust reveal reveal--delay-2">
+        <div class="card__icon"><span class="material-symbols-rounded">workspace_premium</span></div>
+        <h3 class="card__title">社員登用・独立支援</h3>
+        <p class="card__body">黒服・マネージャー候補から店長・独立経営までのキャリアパスを持つ契約店舗多数。将来の独立までご支援いたします。</p>
+      </article>
+
+      <article class="card card--trust reveal reveal--delay-3">
+        <div class="card__icon"><span class="material-symbols-rounded">schedule</span></div>
+        <h3 class="card__title">昼夜両立・副業も相談可</h3>
+        <p class="card__body">本業との両立・掛け持ち勤務もご相談可能。ご希望のライフスタイルに合わせた求人をご提案いたします。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ③ 対応業種・職種
+     ========================================================================= -->
+<section class="section" id="categories" aria-labelledby="categories-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Job Categories</span>
+      <h2 id="categories-title" class="section__title reveal reveal--delay-1">
+        対応<span>業種・職種</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        ナイトワーク業界の幅広いネットワークをもとに、多様なポジションのご紹介が可能です。
+      </p>
+    </header>
+
+    <div class="jobtypes reveal reveal--delay-3" aria-label="対応業種・職種">
+      <span class="chip chip--area">ホスト</span>
+      <span class="chip chip--area">メンズキャバ</span>
+      <span class="chip chip--area">黒服・ボーイ</span>
+      <span class="chip chip--area">店長候補</span>
+      <span class="chip chip--area">マネージャー候補</span>
+      <span class="chip chip--area">フロア</span>
+      <span class="chip chip--area">スタッフ</span>
+      <span class="chip chip--area">送迎ドライバー</span>
+      <span class="chip chip--area">スカウト</span>
+      <span class="chip chip--area">SNS・広告担当</span>
+      <span class="chip chip--area">内勤・事務</span>
+      <span class="chip chip--area">独立サポート</span>
+    </div>
+
+    <p class="jobtypes-note reveal reveal--delay-4">
+      ※記載のないポジションもご相談ください。業種・経験に応じてご提案いたします。
+    </p>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ④ ご利用の流れ
+     ========================================================================= -->
+<section class="section section--tint" id="flow" aria-labelledby="flow-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Process</span>
+      <h2 id="flow-title" class="section__title reveal reveal--delay-1">
+        ご利用の<span>流れ</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        ご登録から就業開始、そして入社後のフォローまで、<br />
+        各ステップを専任の担当者が責任を持ってサポートいたします。
+      </p>
+    </header>
+
+    <ol class="step-flow">
+      <li class="step reveal">
+        <div class="step__num en">01</div>
+        <div class="step__icon"><span class="material-symbols-rounded">edit_note</span></div>
+        <h3 class="step__title">ご登録</h3>
+        <p class="step__body">お電話・LINE・フォームから、ご希望の方法でお気軽にご連絡ください。</p>
+      </li>
+      <li class="step reveal reveal--delay-1">
+        <div class="step__num en">02</div>
+        <div class="step__icon"><span class="material-symbols-rounded">chat</span></div>
+        <h3 class="step__title">ヒアリング</h3>
+        <p class="step__body">ご希望の業態・収入・エリア・ライフスタイルを専任担当者が丁寧にお伺いいたします。</p>
+      </li>
+      <li class="step reveal reveal--delay-2">
+        <div class="step__num en">03</div>
+        <div class="step__icon"><span class="material-symbols-rounded">work</span></div>
+        <h3 class="step__title">求人のご紹介</h3>
+        <p class="step__body">契約店舗の中から、ご希望に合うお店を厳選してご紹介いたします。</p>
+      </li>
+      <li class="step reveal reveal--delay-3">
+        <div class="step__num en">04</div>
+        <div class="step__icon"><span class="material-symbols-rounded">support_agent</span></div>
+        <h3 class="step__title">面接・体験入店</h3>
+        <p class="step__body">応募・面接・体験入店までフルサポート。お店の雰囲気を確認してからご入店いただけます。</p>
+      </li>
+      <li class="step reveal reveal--delay-4">
+        <div class="step__num en">05</div>
+        <div class="step__icon"><span class="material-symbols-rounded">verified</span></div>
+        <h3 class="step__title">入店・キャリア構築</h3>
+        <p class="step__body">入店後も継続サポート。将来のキャリアアップ・独立までご相談可能です。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ⑤ 働く方の声
+     ========================================================================= -->
+<section class="section section--alt" id="voices" aria-labelledby="voices-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Voices</span>
+      <h2 id="voices-title" class="section__title reveal reveal--delay-1">
+        働く方の<span>声</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        実際にZENITHをご利用された方々からの声をご紹介します。
+      </p>
+    </header>
+
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <div class="testimonial">
+          <span class="testimonial__quote-mark en" aria-hidden="true">“</span>
+          <p class="testimonial__body">前職の営業経験を活かし、入店半年で指名ランキング入りすることができました。未経験への不安はZENITHさんの丁寧なヒアリングで解消でき、自分に合うお店を選んでいただけたのが大きかったです。</p>
+          <div class="testimonial__foot">
+            <span class="testimonial__avatar testimonial__avatar--1" aria-hidden="true">T</span>
+            <div>
+              <div class="testimonial__name">Tさん</div>
+              <div class="testimonial__meta">20代 / ホスト / 北新地</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal--delay-1">
+        <div class="testimonial">
+          <span class="testimonial__quote-mark en" aria-hidden="true">“</span>
+          <p class="testimonial__body">黒服からスタートし、2年で店長に昇格することができました。キャリアパスを明確に示してくれる契約店舗を紹介してもらえたおかげで、迷わず目標に向かって進められています。</p>
+          <div class="testimonial__foot">
+            <span class="testimonial__avatar testimonial__avatar--2" aria-hidden="true">K</span>
+            <div>
+              <div class="testimonial__name">Kさん</div>
+              <div class="testimonial__meta">30代 / 店長候補 / ミナミ</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal--delay-2">
+        <div class="testimonial">
+          <span class="testimonial__quote-mark en" aria-hidden="true">“</span>
+          <p class="testimonial__body">昼職と両立できる勤務シフトで、副業として安定して働けています。細かい希望にも親身に対応してくれて、自分のペースを崩さずに収入を増やせているのがありがたいです。</p>
+          <div class="testimonial__foot">
+            <span class="testimonial__avatar testimonial__avatar--3" aria-hidden="true">N</span>
+            <div>
+              <div class="testimonial__name">Nさん</div>
+              <div class="testimonial__meta">20代 / 送迎ドライバー / 梅田</div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ⑥ FAQ
+     ========================================================================= -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container container--narrow">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">FAQ</span>
+      <h2 id="faq-title" class="section__title reveal reveal--delay-1">
+        よくある<span>ご質問</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        ご登録前によくいただくご質問をまとめました。<br />
+        こちらに載っていないご質問もお気軽にお問い合わせください。
+      </p>
+    </header>
+
+    <div class="accordion" role="list">
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">未経験でもホスト・黒服に挑戦できますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>はい、未経験OKの求人が約6割を占めます。研修制度が整った契約店舗を中心にご紹介しておりますので、業界がはじめての方でも安心してスタートいただけます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">収入の目安はどのくらいですか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>職種・実力により幅広くなります。ホストは歩合比率の高い高報酬、黒服・マネージャーは月給制で安定収入が見込めます。詳細はご面談にてお伝えいたします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">昼職と掛け持ちでも登録できますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>もちろん可能です。週1・短時間勤務OKの求人もご紹介できますので、ご希望の勤務スタイルをお気軽にお伝えください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">将来の独立までサポートしてもらえますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>独立経営を志望される方には、契約店舗の経営ノウハウ共有や独立支援制度のあるお店を中心にご紹介しています。キャリアの最終ゴールまで伴走いたします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">登録・ご利用に費用はかかりますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>求職者様は完全無料です。面接交通費もご負担いたしませんので、安心してご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ⑦ Contact CTA
+     ========================================================================= -->
+<section class="contact-cta" aria-labelledby="cta-title">
+  <div class="container contact-cta__inner">
+    <h2 id="cta-title" class="contact-cta__title reveal">
+      次のステージへ、<span style="color:var(--c-primary-dark);">ZENITHが伴走します。</span>
+    </h2>
+    <p class="contact-cta__sub reveal reveal--delay-1">
+      まずは専任担当者への無料相談から、あなたに合ったキャリアをご提案します。
+    </p>
+    <div class="contact-cta__ctas reveal reveal--delay-2">
+      <a href="contact.html" class="btn btn--primary btn--lg">
+        <span class="material-symbols-rounded" aria-hidden="true">edit_note</span>
+        無料相談を申し込む
+      </a>
+      <a href="tel:0000000000" class="btn btn--outline btn--lg">
+        <span class="material-symbols-rounded" aria-hidden="true">call</span>
+        お電話でご相談
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================================
+     Footer
+     ========================================================================= -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="株式会社ZENITH" class="footer__logo" />
+        <div class="footer__company">株式会社ZENITH</div>
+        <div class="footer__meta">
+          〒530-0015<br />
+          大阪市北区中崎西一丁目8番24号<br />
+          アインズビル梅田901<br />
+          会社法人等番号 1200-01-285699
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Sitemap</h3>
+        <ul class="footer__links">
+          <li><a href="index.html#services" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>事業内容</a></li>
+          <li><a href="index.html#flow" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>ご利用の流れ</a></li>
+          <li><a href="company.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>会社概要</a></li>
+          <li><a href="contact.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Compliance</h3>
+        <ul class="footer__links">
+          <li><a href="privacy.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>プライバシーポリシー</a></li>
+          <li><a href="privacy.html#personal" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>個人情報の取扱について</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copy">© <span data-year>2026</span> <span class="en">ZENITH Inc.</span> All rights reserved.</div>
+      <div class="footer__copy en">NIGHTWORK PLACEMENT AGENCY · OSAKA</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" type="button" aria-label="ページ上部へ戻る">
+  <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_up</span>
+</button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

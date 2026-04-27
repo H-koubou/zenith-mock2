@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>お問い合わせ | 株式会社ZENITH</title>
+<meta name="description" content="株式会社ZENITHへのお問い合わせはこちらから。女の子からのご相談も、店舗様からのご相談も秘密厳守で承ります。北新地・ミナミ・梅田エリア対応。" />
+<meta name="keywords" content="お問い合わせ,相談,応募,北新地,ミナミ,梅田,ナイトワーク,職業紹介" />
+
+<!-- OGP -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="お問い合わせ | 株式会社ZENITH" />
+<meta property="og:description" content="女の子からのご相談も、店舗様からのご相談も、お気軽にどうぞ。秘密厳守で対応いたします。" />
+<meta property="og:site_name" content="株式会社ZENITH" />
+<meta name="theme-color" content="#2FA9E0" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css" />
+
+<link rel="icon" href="assets/images/logo.png" />
+
+<!-- Page-scoped styles -->
+<style>
+  /* Sub-hero (shared pattern with company) */
+  .page-contact .subhero {
+    position: relative;
+    padding-top: calc(var(--nav-h) + 56px);
+    padding-bottom: clamp(40px, 6vw, 72px);
+    background:
+      radial-gradient(900px 450px at 90% -10%, #CFE8F6 0%, transparent 60%),
+      radial-gradient(700px 360px at 0% 110%, #FDEEEE 0%, transparent 60%),
+      linear-gradient(180deg, #F5FAFD 0%, #FFFFFF 100%);
+    overflow: hidden;
+  }
+  .page-contact .subhero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: var(--damask);
+    background-size: 110px 110px;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+  .page-contact .subhero__inner { position: relative; z-index: 1; text-align: center; }
+  .page-contact .subhero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--c-primary);
+    margin-bottom: 14px;
+  }
+  .page-contact .subhero__eyebrow::before,
+  .page-contact .subhero__eyebrow::after {
+    content: '';
+    width: 32px; height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+  .page-contact .subhero__title {
+    font-size: clamp(28px, 4.4vw, 44px);
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    color: var(--c-ink);
+    margin-bottom: 16px;
+  }
+  .page-contact .subhero__sub {
+    font-size: clamp(14px, 1.4vw, 16px);
+    color: var(--c-ink-2);
+    letter-spacing: 0.06em;
+    line-height: 2;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  /* Tab selector */
+  .page-contact .tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--c-surface-alt);
+    padding: 8px;
+    border-radius: var(--r-pill);
+    max-width: 640px;
+    margin: 0 auto 48px;
+    box-shadow: var(--sh-xs);
+  }
+  .page-contact .tabs__btn {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: var(--r-pill);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--c-ink-2);
+    transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .page-contact .tabs__btn .material-symbols-rounded { font-size: 18px; }
+  .page-contact .tabs__btn:hover { color: var(--c-primary-dark); }
+  .page-contact .tabs__btn.is-active {
+    background: #fff;
+    color: var(--c-primary-dark);
+    box-shadow: var(--sh-sm);
+  }
+
+  .page-contact .tab-panel { display: none; }
+  .page-contact .tab-panel.is-active { display: block; }
+
+  /* Form card */
+  .page-contact .form-card {
+    background: #fff;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--c-border-soft);
+    box-shadow: var(--sh-sm);
+    padding: clamp(28px, 4vw, 48px);
+    max-width: 960px;
+    margin-inline: auto;
+  }
+  .page-contact .form-intro {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--c-border);
+  }
+  .page-contact .form-intro__title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--c-ink);
+    margin-bottom: 8px;
+  }
+  .page-contact .form-intro__desc {
+    font-size: 13px;
+    color: var(--c-ink-2);
+    line-height: 1.9;
+  }
+  .page-contact .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 24px;
+  }
+  .page-contact .form-grid .field--full { grid-column: 1 / -1; }
+
+  /* Radio chips (for 連絡方法 and エリア) */
+  .page-contact .radio-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .page-contact .radio-chips input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .page-contact .radio-chips label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: var(--r-pill);
+    background: #fff;
+    border: 1.5px solid var(--c-border);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--c-ink-2);
+    cursor: pointer;
+    transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out);
+  }
+  .page-contact .radio-chips label .material-symbols-rounded { font-size: 16px; color: var(--c-primary); }
+  .page-contact .radio-chips label:hover { border-color: var(--c-primary); color: var(--c-primary-dark); }
+  .page-contact .radio-chips input:checked + label {
+    background: var(--c-primary-pale);
+    border-color: var(--c-primary);
+    color: var(--c-primary-dark);
+    box-shadow: var(--sh-xs);
+  }
+
+  /* Consent */
+  .page-contact .consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 20px;
+    background: var(--c-surface-alt);
+    border-radius: var(--r-md);
+    border: 1px solid var(--c-border-soft);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--c-ink);
+  }
+  .page-contact .consent input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--c-primary); flex-shrink: 0; }
+  .page-contact .consent a { color: var(--c-primary-dark); text-decoration: underline; font-weight: 600; }
+
+  .page-contact .form-submit {
+    text-align: center;
+    margin-top: 28px;
+  }
+  .page-contact .form-submit .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0.2);
+  }
+  .page-contact .form-submit .btn:disabled:hover { transform: none; background: var(--c-coral); }
+
+  /* Info cards */
+  .page-contact .info-card {
+    background: #fff;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--c-border-soft);
+    box-shadow: var(--sh-xs);
+    padding: 32px 28px;
+    text-align: center;
+    transition: transform var(--t-med) var(--ease-out), box-shadow var(--t-med) var(--ease-out);
+  }
+  .page-contact .info-card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
+  .page-contact .info-card__icon {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--c-primary-pale);
+    color: var(--c-primary-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .page-contact .info-card__icon .material-symbols-rounded { font-size: 28px; }
+  .page-contact .info-card__label {
+    font-family: var(--ff-en);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    color: var(--c-primary);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .page-contact .info-card__value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--c-ink);
+    letter-spacing: 0.06em;
+  }
+  .page-contact .info-card__value a { color: var(--c-primary-dark); }
+  .page-contact .info-card__note {
+    font-size: 12px;
+    color: var(--c-ink-3);
+    margin-top: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .page-contact .tabs { flex-direction: column; border-radius: var(--r-md); }
+    .page-contact .tabs__btn { width: 100%; }
+    .page-contact .form-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="page-contact">
+
+<!-- Navbar -->
+<header class="navbar" role="banner">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="株式会社ZENITH トップページ">
+      <img src="assets/images/logo.png" alt="株式会社ZENITH" class="navbar__logo-img" />
+      <span class="navbar__wordmark">
+        <span class="navbar__wordmark-en">ZENITH</span>
+        <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+      </span>
+    </a>
+
+    <nav class="navbar__menu" aria-label="メインナビゲーション">
+      <a href="clients.html" class="navbar__link">店舗様ページ</a>
+      <a href="cast.html" class="navbar__link">女の子用ページ</a>
+      <a href="company.html" class="navbar__link">会社概要</a>
+      <a href="contact.html" class="navbar__link is-active" aria-current="page">お問い合わせ</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn--primary navbar__cta">
+      <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+      体験入店お申込み
+    </a>
+
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+      <span class="hamburger__box" aria-hidden="true">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-backdrop" aria-hidden="true"></div>
+<aside id="drawer" class="drawer" aria-label="モバイルメニュー">
+  <div class="drawer__head">
+    <span class="navbar__wordmark">
+      <span class="navbar__wordmark-en">ZENITH</span>
+      <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+    </span>
+    <button class="drawer__close" type="button" aria-label="メニューを閉じる">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+  </div>
+  <nav class="drawer__menu" aria-label="モバイルナビゲーション">
+    <a href="clients.html" class="drawer__link"><span class="material-symbols-rounded">storefront</span>店舗様ページ</a>
+    <a href="cast.html" class="drawer__link"><span class="material-symbols-rounded">diamond</span>女の子用ページ</a>
+    <a href="company.html" class="drawer__link"><span class="material-symbols-rounded">apartment</span>会社概要</a>
+    <a href="contact.html" class="drawer__link"><span class="material-symbols-rounded">mail</span>お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--primary btn--block drawer__cta">
+    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+    体験入店お申込み
+  </a>
+</aside>
+
+<main id="main">
+
+  <!-- Sub-hero -->
+  <section class="subhero" aria-label="ページタイトル">
+    <div class="container subhero__inner">
+      <span class="subhero__eyebrow reveal">CONTACT</span>
+      <h1 class="subhero__title reveal reveal--delay-1">お問い合わせ</h1>
+      <p class="subhero__sub reveal reveal--delay-2">
+        女の子からのご相談も、店舗様からのご相談も、お気軽にどうぞ。<br />
+        秘密厳守で対応いたします。
+      </p>
+    </div>
+  </section>
+
+  <!-- ① Tabs & Form -->
+  <section class="section" id="form" aria-labelledby="form-title">
+    <div class="container">
+      <header class="section__header">
+        <span class="section__eyebrow reveal">Inquiry Form</span>
+        <h2 id="form-title" class="section__title reveal reveal--delay-1">お問い合わせ<span>種別</span></h2>
+        <p class="section__lead reveal reveal--delay-2">
+          ご相談内容に合った種別を選んでいただくと、よりスムーズにご案内できます。
+        </p>
+      </header>
+
+      <div class="tabs reveal" role="tablist" aria-label="お問い合わせ種別">
+        <button type="button" class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="girl" id="tab-girl">
+          <span class="material-symbols-rounded" aria-hidden="true">diamond</span>
+          女の子の方
+        </button>
+        <button type="button" class="tabs__btn" role="tab" aria-selected="false" data-tab="store" id="tab-store">
+          <span class="material-symbols-rounded" aria-hidden="true">storefront</span>
+          店舗様
+        </button>
+        <button type="button" class="tabs__btn" role="tab" aria-selected="false" data-tab="other" id="tab-other">
+          <span class="material-symbols-rounded" aria-hidden="true">help</span>
+          その他
+        </button>
+      </div>
+
+      <div class="form-card reveal reveal--delay-1">
+        <div class="tab-panel is-active" data-panel="girl" role="tabpanel" aria-labelledby="tab-girl">
+          <div class="form-intro">
+            <h3 class="form-intro__title">女の子からのご相談</h3>
+            <p class="form-intro__desc">未経験・在籍中・体験入店のご相談、どなたでもお気軽にどうぞ。秘密厳守でお返事いたします。</p>
+          </div>
+        </div>
+        <div class="tab-panel" data-panel="store" role="tabpanel" aria-labelledby="tab-store" hidden>
+          <div class="form-intro">
+            <h3 class="form-intro__title">店舗様からのご相談</h3>
+            <p class="form-intro__desc">人材のご相談・業務提携のご相談などを承っております。まずはお気軽にご連絡ください。</p>
+          </div>
+        </div>
+        <div class="tab-panel" data-panel="other" role="tabpanel" aria-labelledby="tab-other" hidden>
+          <div class="form-intro">
+            <h3 class="form-intro__title">その他のお問い合わせ</h3>
+            <p class="form-intro__desc">取材・採用・パートナーシップなど、上記以外のご用件はこちらからお願いいたします。</p>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" action="#" method="post" novalidate>
+          <input type="hidden" name="inquiry_type" id="inquiry_type" value="girl" />
+
+          <div class="form-grid">
+            <div class="field">
+              <label class="field__label" for="name">お名前<span class="req">必須</span></label>
+              <input class="field__input" type="text" id="name" name="name" placeholder="例：山田 花子" required />
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="kana">お名前（ふりがな）<span class="req">必須</span></label>
+              <input class="field__input" type="text" id="kana" name="kana" placeholder="例：やまだ はなこ" required />
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="email">メールアドレス<span class="req">必須</span></label>
+              <input class="field__input" type="email" id="email" name="email" placeholder="例：your-name@example.com" required />
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="tel">電話番号</label>
+              <input class="field__input" type="tel" id="tel" name="tel" placeholder="例：090-1234-5678" />
+              <p class="field__hint">ご連絡がスムーズになりますが、必須ではありません。</p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="age">年齢</label>
+              <select class="field__select" id="age" name="age">
+                <option value="">選択してください</option>
+                <option value="18-20">18〜20歳</option>
+                <option value="21-25">21〜25歳</option>
+                <option value="26-30">26〜30歳</option>
+                <option value="31-35">31〜35歳</option>
+                <option value="36+">36歳以上</option>
+              </select>
+              <p class="field__hint">女の子からのご相談の場合にご記入ください。</p>
+            </div>
+
+            <div class="field">
+              <span class="field__label">ご希望の連絡方法</span>
+              <div class="radio-chips" role="radiogroup" aria-label="ご希望の連絡方法">
+                <input type="radio" id="contact-mail" name="contact_method" value="mail" checked />
+                <label for="contact-mail"><span class="material-symbols-rounded" aria-hidden="true">mail</span>メール</label>
+                <input type="radio" id="contact-tel" name="contact_method" value="tel" />
+                <label for="contact-tel"><span class="material-symbols-rounded" aria-hidden="true">call</span>電話</label>
+                <input type="radio" id="contact-line" name="contact_method" value="line" />
+                <label for="contact-line"><span class="material-symbols-rounded" aria-hidden="true">chat</span>LINE</label>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">ご希望エリア</span>
+              <div class="radio-chips" role="radiogroup" aria-label="ご希望エリア">
+                <input type="radio" id="area-kitashinchi" name="area" value="kitashinchi" />
+                <label for="area-kitashinchi"><span class="material-symbols-rounded" aria-hidden="true">location_on</span>北新地</label>
+                <input type="radio" id="area-minami" name="area" value="minami" />
+                <label for="area-minami"><span class="material-symbols-rounded" aria-hidden="true">location_on</span>ミナミ</label>
+                <input type="radio" id="area-umeda" name="area" value="umeda" />
+                <label for="area-umeda"><span class="material-symbols-rounded" aria-hidden="true">location_on</span>梅田</label>
+                <input type="radio" id="area-any" name="area" value="any" checked />
+                <label for="area-any"><span class="material-symbols-rounded" aria-hidden="true">star</span>指定なし</label>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <label class="field__label" for="message">ご相談内容<span class="req">必須</span></label>
+              <textarea class="field__textarea" id="message" name="message" rows="5" placeholder="ご質問・ご希望などをご自由にご記入ください。" required></textarea>
+            </div>
+
+            <div class="field field--full">
+              <label class="consent">
+                <input type="checkbox" id="consent" name="consent" required />
+                <span>
+                  <a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意の上、送信いたします。<span class="req">必須</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary btn--lg" id="submit-btn" disabled>
+              <span class="material-symbols-rounded" aria-hidden="true">send</span>
+              送信する
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② その他の連絡先 -->
+  <section class="section section--alt" id="other-contact" aria-labelledby="other-title">
+    <div class="container">
+      <header class="section__header">
+        <span class="section__eyebrow reveal">Direct Contact</span>
+        <h2 id="other-title" class="section__title reveal reveal--delay-1">その他の<span>連絡先</span></h2>
+        <p class="section__lead reveal reveal--delay-2">
+          フォーム以外の方法でもお気軽にご連絡いただけます。
+        </p>
+      </header>
+
+      <div class="grid grid--3">
+        <article class="info-card reveal">
+          <div class="info-card__icon" aria-hidden="true"><span class="material-symbols-rounded">mail</span></div>
+          <div class="info-card__label">Email</div>
+          <p class="info-card__value"><a href="mailto:info@zenith-jp.co.jp">info@zenith-jp.co.jp</a></p>
+          <p class="info-card__note">24時間受付・順次返信</p>
+        </article>
+
+        <article class="info-card reveal reveal--delay-1">
+          <div class="info-card__icon" aria-hidden="true"><span class="material-symbols-rounded">schedule</span></div>
+          <div class="info-card__label">Business Hours</div>
+          <p class="info-card__value">平日 <span class="en">10:00</span> – <span class="en">21:00</span></p>
+          <p class="info-card__note">土日祝応相談</p>
+        </article>
+
+        <article class="info-card reveal reveal--delay-2">
+          <div class="info-card__icon" aria-hidden="true"><span class="material-symbols-rounded">location_on</span></div>
+          <div class="info-card__label">Address</div>
+          <p class="info-card__value">〒530-0015<br />大阪市北区中崎西一丁目8番24号<br />アインズビル梅田901</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container container--narrow">
+      <header class="section__header">
+        <span class="section__eyebrow reveal">FAQ</span>
+        <h2 id="faq-title" class="section__title reveal reveal--delay-1">よくある<span>ご質問</span></h2>
+        <p class="section__lead reveal reveal--delay-2">
+          お問い合わせの前によくいただくご質問をまとめました。
+        </p>
+      </header>
+
+      <div class="accordion" role="list">
+        <div class="accordion__item reveal" role="listitem">
+          <button type="button" class="accordion__head" aria-expanded="false">
+            <span class="accordion__q en">Q</span>
+            <span class="accordion__title">返信はいつ頃もらえますか？</span>
+            <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+          </button>
+          <div class="accordion__body">
+            <div class="accordion__body-inner">
+              <span class="accordion__a en">A</span>
+              <p>平日の営業時間内であれば、原則24時間以内にご返信いたします。土日祝日を挟む場合や混雑状況により翌営業日以降となる場合がございます。お急ぎの方はお電話またはLINEでもご連絡可能です。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal" role="listitem">
+          <button type="button" class="accordion__head" aria-expanded="false">
+            <span class="accordion__q en">Q</span>
+            <span class="accordion__title">登録だけでもOKですか？</span>
+            <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+          </button>
+          <div class="accordion__body">
+            <div class="accordion__body-inner">
+              <span class="accordion__a en">A</span>
+              <p>もちろんご登録だけでも大歓迎です。ご希望条件に合うお仕事が出たタイミングでご連絡する形でも問題ございません。ご自身のペースでご検討ください。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal" role="listitem">
+          <button type="button" class="accordion__head" aria-expanded="false">
+            <span class="accordion__q en">Q</span>
+            <span class="accordion__title">個人情報の取扱は？</span>
+            <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+          </button>
+          <div class="accordion__body">
+            <div class="accordion__body-inner">
+              <span class="accordion__a en">A</span>
+              <p>当社のプライバシーポリシーに基づき、厳重に管理いたします。ご本人の明示的な同意なしに、店舗様を含む第三者に情報を共有することはありません。詳細は<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal" role="listitem">
+          <button type="button" class="accordion__head" aria-expanded="false">
+            <span class="accordion__q en">Q</span>
+            <span class="accordion__title">家族や友人にバレませんか？</span>
+            <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+          </button>
+          <div class="accordion__body">
+            <div class="accordion__body-inner">
+              <span class="accordion__a en">A</span>
+              <p>個人情報は厳格に管理しており、ご本人の同意なく外部へお伝えすることは一切ございません。またご連絡の時間帯・手段も事前にご希望を伺い、その範囲内でのみ連絡いたしますので、どうぞご安心ください。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="株式会社ZENITH" class="footer__logo" />
+        <div class="footer__company">株式会社ZENITH</div>
+        <div class="footer__meta">
+          〒530-0015<br />
+          大阪市北区中崎西一丁目8番24号<br />
+          アインズビル梅田901<br />
+          会社法人等番号 1200-01-285699
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Sitemap</h3>
+        <ul class="footer__links">
+          <li><a href="clients.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>店舗様ページ</a></li>
+          <li><a href="cast.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>女の子用ページ</a></li>
+          <li><a href="company.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>会社概要</a></li>
+          <li><a href="contact.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Compliance</h3>
+        <ul class="footer__links">
+          <li><a href="privacy.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>プライバシーポリシー</a></li>
+          <li><a href="privacy.html#personal" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>個人情報の取扱について</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copy">© <span data-year>2026</span> <span class="en">ZENITH Inc.</span> All rights reserved.</div>
+      <div class="footer__copy en">NIGHTWORK PLACEMENT AGENCY · OSAKA</div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" type="button" aria-label="ページ上部へ戻る">
+  <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_up</span>
+</button>
+
+<script src="js/main.js" defer></script>
+
+<!-- Page-scoped JS: tab toggle, URL ?area= pre-select, submit gate -->
+<script>
+  (function () {
+    // -------- Tab switching --------
+    var tabs = document.querySelectorAll('.tabs__btn');
+    var panels = document.querySelectorAll('.tab-panel');
+    var typeInput = document.getElementById('inquiry_type');
+
+    tabs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        tabs.forEach(function (b) {
+          var active = b === btn;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        panels.forEach(function (p) {
+          var active = p.getAttribute('data-panel') === target;
+          p.classList.toggle('is-active', active);
+          if (active) p.removeAttribute('hidden'); else p.setAttribute('hidden', '');
+        });
+        if (typeInput) typeInput.value = target;
+      });
+    });
+
+    // -------- URL ?area= pre-select --------
+    // Supported: ?area=kitashinchi | minami | umeda
+    // Matches the radio chip of the same value and checks it.
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var area = params.get('area');
+      if (area) {
+        var radio = document.querySelector('input[name="area"][value="' + area.replace(/[^a-z]/gi, '') + '"]');
+        if (radio) radio.checked = true;
+      }
+    } catch (e) { /* noop */ }
+
+    // -------- Submit gate: disable submit until consent is checked --------
+    var consent = document.getElementById('consent');
+    var submitBtn = document.getElementById('submit-btn');
+    function syncSubmit() {
+      if (!consent || !submitBtn) return;
+      submitBtn.disabled = !consent.checked;
+    }
+    if (consent) consent.addEventListener('change', syncSubmit);
+    syncSubmit();
+
+    // Prevent actual submission in mockup
+    var form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('お問い合わせありがとうございます。\n※こちらはモックアップのため送信は行われません。');
+      });
+    }
+  })();
+</script>
+</body>
+</html>

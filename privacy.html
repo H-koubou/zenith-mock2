@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>プライバシーポリシー | 株式会社ZENITH</title>
+<meta name="description" content="株式会社ZENITHのプライバシーポリシー。個人情報保護法および職業安定法に基づき、当社が取得する個人情報の利用目的・管理体制・開示請求手続きなどを定めています。" />
+<meta name="keywords" content="プライバシーポリシー,個人情報保護,個人情報,職業紹介,株式会社ZENITH" />
+
+<!-- OGP -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="プライバシーポリシー | 株式会社ZENITH" />
+<meta property="og:description" content="株式会社ZENITHにおける個人情報の取扱方針について。" />
+<meta property="og:site_name" content="株式会社ZENITH" />
+<meta name="theme-color" content="#2FA9E0" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css" />
+
+<link rel="icon" href="assets/images/logo.png" />
+
+<!-- Page-scoped styles -->
+<style>
+  /* Sub-hero */
+  .page-privacy .subhero {
+    position: relative;
+    padding-top: calc(var(--nav-h) + 56px);
+    padding-bottom: clamp(40px, 6vw, 72px);
+    background:
+      radial-gradient(900px 450px at 90% -10%, #CFE8F6 0%, transparent 60%),
+      radial-gradient(700px 360px at 0% 110%, #FDEEEE 0%, transparent 60%),
+      linear-gradient(180deg, #F5FAFD 0%, #FFFFFF 100%);
+    overflow: hidden;
+  }
+  .page-privacy .subhero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: var(--damask);
+    background-size: 110px 110px;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+  .page-privacy .subhero__inner { position: relative; z-index: 1; text-align: center; }
+  .page-privacy .subhero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--c-primary);
+    margin-bottom: 14px;
+  }
+  .page-privacy .subhero__eyebrow::before,
+  .page-privacy .subhero__eyebrow::after {
+    content: '';
+    width: 32px; height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+  .page-privacy .subhero__title {
+    font-size: clamp(28px, 4.4vw, 44px);
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    color: var(--c-ink);
+    margin-bottom: 16px;
+  }
+  .page-privacy .subhero__sub {
+    font-family: var(--ff-en);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    color: var(--c-ink-2);
+  }
+
+  /* Layout */
+  .page-privacy .pp-wrap {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: flex-start;
+  }
+
+  .page-privacy .pp-toc {
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+    background: #fff;
+    border: 1px solid var(--c-border-soft);
+    border-radius: var(--r-md);
+    box-shadow: var(--sh-xs);
+    padding: 22px 20px;
+  }
+  .page-privacy .pp-toc__title {
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    color: var(--c-primary-dark);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--c-border-soft);
+  }
+  .page-privacy .pp-toc__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .page-privacy .pp-toc__link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: var(--r-sm);
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--c-ink-2);
+    transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+  }
+  .page-privacy .pp-toc__link:hover { background: var(--c-primary-pale); color: var(--c-primary-dark); }
+  .page-privacy .pp-toc__num {
+    font-family: var(--ff-en);
+    font-weight: 600;
+    color: var(--c-primary);
+    flex-shrink: 0;
+    font-size: 11px;
+    padding-top: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  .page-privacy .pp-content {
+    max-width: 760px;
+    font-size: 14.5px;
+    line-height: 2;
+    color: var(--c-ink);
+    letter-spacing: 0.04em;
+  }
+  .page-privacy .pp-intro {
+    padding: 22px 26px;
+    background: var(--c-primary-pale-2);
+    border-radius: var(--r-md);
+    border-left: 4px solid var(--c-primary);
+    margin-bottom: 48px;
+    font-size: 14px;
+    line-height: 1.95;
+    color: var(--c-ink);
+  }
+
+  .page-privacy .pp-article + .pp-article { margin-top: 44px; }
+  .page-privacy .pp-article__eyebrow {
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--c-primary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .page-privacy .pp-article__title {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    color: var(--c-ink);
+    padding-left: 16px;
+    border-left: 4px solid var(--c-primary);
+    margin-bottom: 18px;
+  }
+  .page-privacy .pp-article h3 {
+    font-size: 15px;
+    color: var(--c-primary-dark);
+    letter-spacing: 0.08em;
+    margin: 20px 0 10px;
+  }
+  .page-privacy .pp-article p + p { margin-top: 12px; }
+  .page-privacy .pp-article ul,
+  .page-privacy .pp-article ol {
+    margin: 12px 0 12px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .page-privacy .pp-article ul li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--c-ink);
+  }
+  .page-privacy .pp-article ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--c-primary);
+    box-shadow: 0 0 0 3px var(--c-primary-pale);
+  }
+  .page-privacy .pp-article ol {
+    counter-reset: ppol;
+    padding-left: 0;
+  }
+  .page-privacy .pp-article ol > li {
+    counter-increment: ppol;
+    position: relative;
+    padding-left: 32px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .page-privacy .pp-article ol > li::before {
+    content: "(" counter(ppol) ")";
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--c-primary-dark);
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .page-privacy .pp-contact-box {
+    margin-top: 16px;
+    padding: 20px 24px;
+    background: var(--c-surface-alt);
+    border-radius: var(--r-md);
+    border: 1px solid var(--c-border-soft);
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--c-ink);
+  }
+  .page-privacy .pp-contact-box strong {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: var(--c-ink);
+    margin-bottom: 8px;
+  }
+  .page-privacy .pp-contact-box a { color: var(--c-primary-dark); font-weight: 600; }
+
+  .page-privacy .pp-sign {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--c-border-soft);
+    font-size: 13px;
+    color: var(--c-ink-2);
+    line-height: 1.9;
+  }
+  .page-privacy .pp-sign strong { color: var(--c-ink); display: block; margin-top: 4px; letter-spacing: 0.08em; }
+
+  @media (max-width: 1024px) {
+    .page-privacy .pp-wrap { grid-template-columns: 1fr; }
+    .page-privacy .pp-toc { position: static; }
+  }
+  @media (max-width: 768px) {
+    .page-privacy .pp-article__title { font-size: 18px; padding-left: 12px; }
+  }
+</style>
+</head>
+<body class="page-privacy">
+
+<!-- Navbar -->
+<header class="navbar" role="banner">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="株式会社ZENITH トップページ">
+      <img src="assets/images/logo.png" alt="株式会社ZENITH" class="navbar__logo-img" />
+      <span class="navbar__wordmark">
+        <span class="navbar__wordmark-en">ZENITH</span>
+        <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+      </span>
+    </a>
+
+    <nav class="navbar__menu" aria-label="メインナビゲーション">
+      <a href="clients.html" class="navbar__link">店舗様ページ</a>
+      <a href="cast.html" class="navbar__link">女の子用ページ</a>
+      <a href="company.html" class="navbar__link">会社概要</a>
+      <a href="contact.html" class="navbar__link">お問い合わせ</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn--primary navbar__cta">
+      <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+      体験入店お申込み
+    </a>
+
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+      <span class="hamburger__box" aria-hidden="true">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-backdrop" aria-hidden="true"></div>
+<aside id="drawer" class="drawer" aria-label="モバイルメニュー">
+  <div class="drawer__head">
+    <span class="navbar__wordmark">
+      <span class="navbar__wordmark-en">ZENITH</span>
+      <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+    </span>
+    <button class="drawer__close" type="button" aria-label="メニューを閉じる">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+  </div>
+  <nav class="drawer__menu" aria-label="モバイルナビゲーション">
+    <a href="clients.html" class="drawer__link"><span class="material-symbols-rounded">storefront</span>店舗様ページ</a>
+    <a href="cast.html" class="drawer__link"><span class="material-symbols-rounded">diamond</span>女の子用ページ</a>
+    <a href="company.html" class="drawer__link"><span class="material-symbols-rounded">apartment</span>会社概要</a>
+    <a href="contact.html" class="drawer__link"><span class="material-symbols-rounded">mail</span>お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--primary btn--block drawer__cta">
+    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+    体験入店お申込み
+  </a>
+</aside>
+
+<main id="main">
+
+  <!-- Sub-hero -->
+  <section class="subhero" aria-label="ページタイトル">
+    <div class="container subhero__inner">
+      <span class="subhero__eyebrow reveal">PRIVACY POLICY</span>
+      <h1 class="subhero__title reveal reveal--delay-1">プライバシーポリシー</h1>
+      <p class="subhero__sub reveal reveal--delay-2">施行日：<span class="en">2026</span>年<span class="en">4</span>月<span class="en">7</span>日 ／ 最終改定：<span class="en">2026</span>年<span class="en">4</span>月<span class="en">7</span>日</p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="section" id="personal" aria-label="プライバシーポリシー本文">
+    <div class="container">
+      <div class="pp-wrap">
+
+        <!-- Sidebar TOC -->
+        <aside class="pp-toc reveal" aria-label="目次">
+          <div class="pp-toc__title">Contents</div>
+          <nav class="pp-toc__list" aria-label="目次ナビゲーション">
+            <a class="pp-toc__link" href="#article-01"><span class="pp-toc__num">01</span><span>基本方針</span></a>
+            <a class="pp-toc__link" href="#article-02"><span class="pp-toc__num">02</span><span>個人情報の定義</span></a>
+            <a class="pp-toc__link" href="#article-03"><span class="pp-toc__num">03</span><span>個人情報の取得方法</span></a>
+            <a class="pp-toc__link" href="#article-04"><span class="pp-toc__num">04</span><span>利用目的</span></a>
+            <a class="pp-toc__link" href="#article-05"><span class="pp-toc__num">05</span><span>第三者への提供</span></a>
+            <a class="pp-toc__link" href="#article-06"><span class="pp-toc__num">06</span><span>個人情報の管理</span></a>
+            <a class="pp-toc__link" href="#article-07"><span class="pp-toc__num">07</span><span>開示・訂正・削除等</span></a>
+            <a class="pp-toc__link" href="#article-08"><span class="pp-toc__num">08</span><span>個人情報保護管理者</span></a>
+            <a class="pp-toc__link" href="#article-09"><span class="pp-toc__num">09</span><span>お問い合わせ窓口</span></a>
+            <a class="pp-toc__link" href="#article-10"><span class="pp-toc__num">10</span><span>改定について</span></a>
+          </nav>
+        </aside>
+
+        <!-- Content -->
+        <div class="pp-content reveal reveal--delay-1">
+          <p class="pp-intro">
+            株式会社ZENITH（以下「当社」といいます。）は、職業安定法、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）、職業紹介事業者が遵守すべき個人情報の適正な取扱いに関する指針（平成11年労働省告示第141号）その他の関係法令を遵守し、お客様および求職者の個人情報を適切に取り扱うため、以下のとおりプライバシーポリシーを定めます。
+          </p>
+
+          <!-- Article 01 -->
+          <article class="pp-article" id="article-01">
+            <div class="pp-article__eyebrow">Article 01</div>
+            <h2 class="pp-article__title">基本方針</h2>
+            <p>当社は、有料職業紹介事業を営む事業者として、求職者ならびに求人者の個人情報を取り扱う責任を深く認識し、その保護の重要性を踏まえ、個人情報の適正な取得・利用・管理を徹底するとともに、取り扱う個人情報について継続的な改善に努めます。</p>
+            <p>当社は、個人情報保護法および関係法令、厚生労働大臣が定める指針・通達その他の規範を遵守し、個人情報を取り扱うすべての従業者に対し本方針を周知徹底するものとします。</p>
+          </article>
+
+          <!-- Article 02 -->
+          <article class="pp-article" id="article-02">
+            <div class="pp-article__eyebrow">Article 02</div>
+            <h2 class="pp-article__title">個人情報の定義</h2>
+            <p>本プライバシーポリシーにおいて「個人情報」とは、個人情報保護法第2条第1項に定める個人情報、すなわち生存する個人に関する情報であって、氏名、生年月日、住所、電話番号、メールアドレス、勤務先情報その他の記述等により特定の個人を識別することができるもの（他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものを含みます。）、または個人識別符号が含まれるものをいいます。</p>
+          </article>
+
+          <!-- Article 03 -->
+          <article class="pp-article" id="article-03">
+            <div class="pp-article__eyebrow">Article 03</div>
+            <h2 class="pp-article__title">個人情報の取得方法</h2>
+            <p>当社は、個人情報を取得する場合には、利用目的を明示したうえで、適法かつ公正な手段により取得いたします。具体的には、以下のいずれかの方法により取得します。</p>
+            <ul>
+              <li>当社ウェブサイト上のお問い合わせフォームおよび登録フォームからのご入力</li>
+              <li>電話、電子メール、SNS、LINE等を通じたご連絡</li>
+              <li>当社または提携先が実施する面談、カウンセリング、アンケート等</li>
+              <li>求人者（店舗様）からの人材紹介のご依頼に伴う情報提供</li>
+              <li>その他、合法的かつ適正な方法による取得</li>
+            </ul>
+            <p>なお、当社は職業安定法第5条の5の趣旨を踏まえ、人種、社会的身分、門地、本籍、信条、支持政党、保健医療・性生活に関する情報など、業務目的の達成に必要な範囲を超える個人情報は、原則として取得しないものとします。</p>
+          </article>
+
+          <!-- Article 04 -->
+          <article class="pp-article" id="article-04">
+            <div class="pp-article__eyebrow">Article 04</div>
+            <h2 class="pp-article__title">利用目的</h2>
+            <p>当社は、取得した個人情報を以下の利用目的の範囲内で取り扱います。利用目的を超えて利用する必要が生じた場合には、あらかじめご本人の同意をいただきます。</p>
+            <ul>
+              <li>有料職業紹介事業における求職者および求人者への情報提供、連絡、マッチング業務</li>
+              <li>求人情報のご案内、面接・体験入店の調整その他就業に関するサポート</li>
+              <li>就業後のアフターフォロー、ご相談対応およびトラブル防止</li>
+              <li>お問い合わせへの対応、ご本人確認、契約手続の実施</li>
+              <li>当社サービスの改善、統計的分析、マーケティング資料の作成</li>
+              <li>法令または官公庁からの要請に基づく対応、および紛争の予防・解決</li>
+              <li>その他、前各号に関連または付随する一切の業務</li>
+            </ul>
+          </article>
+
+          <!-- Article 05 -->
+          <article class="pp-article" id="article-05">
+            <div class="pp-article__eyebrow">Article 05</div>
+            <h2 class="pp-article__title">第三者への提供</h2>
+            <p>当社は、あらかじめご本人の同意を得ないで個人情報を第三者に提供することはありません。ただし、次の各号のいずれかに該当する場合はこの限りではありません。</p>
+            <ol>
+              <li>法令に基づく場合</li>
+              <li>人の生命、身体または財産の保護のために必要があり、ご本人の同意を得ることが困難であるとき</li>
+              <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要があり、ご本人の同意を得ることが困難であるとき</li>
+              <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要があるとき</li>
+              <li>あらかじめ以下の事項を通知し、または公表している場合</li>
+            </ol>
+            <p>求人者（店舗様）への個人情報の提供は、求職者ご本人の明示的な同意がある場合に限り、必要最小限の範囲で行うものとします。</p>
+          </article>
+
+          <!-- Article 06 -->
+          <article class="pp-article" id="article-06">
+            <div class="pp-article__eyebrow">Article 06</div>
+            <h2 class="pp-article__title">個人情報の管理（安全管理措置）</h2>
+            <p>当社は、個人情報の漏えい、滅失、毀損等の防止その他個人情報の安全管理のため、以下の安全管理措置を講じます。</p>
+
+            <h3>組織的安全管理措置</h3>
+            <p>個人情報保護管理者を設置し、個人情報の取扱いに関する責任体制を明確化します。また、個人情報の取扱状況を定期的に自己点検し、必要な是正措置を講じます。</p>
+
+            <h3>人的安全管理措置</h3>
+            <p>従業者に対し、個人情報保護に関する内部規程・誓約書の締結および定期的な教育研修を実施します。退職者に対しても守秘義務を継続させるものとします。</p>
+
+            <h3>物理的安全管理措置</h3>
+            <p>個人情報を取り扱う区域への入退室管理および個人情報を記録した書類・媒体の施錠保管を実施します。不要となった媒体は、復元不可能な方法により破棄します。</p>
+
+            <h3>技術的安全管理措置</h3>
+            <p>個人情報を取り扱う情報システムへのアクセス権限の付与を必要最小限に限定し、パスワード管理、通信経路の暗号化、ウイルス対策ソフトの導入等の技術的対策を講じます。</p>
+          </article>
+
+          <!-- Article 07 -->
+          <article class="pp-article" id="article-07">
+            <div class="pp-article__eyebrow">Article 07</div>
+            <h2 class="pp-article__title">個人情報の開示・訂正・削除等の請求</h2>
+            <p>ご本人から、個人情報保護法に基づき、個人情報の利用目的の通知、開示、内容の訂正、追加または削除、利用の停止、消去および第三者への提供の停止（以下「開示等」といいます。）のご請求があった場合、当社はご本人であることを確認のうえ、法令に従い合理的な期間内に対応いたします。</p>
+            <p>開示等のご請求は、本プライバシーポリシー第9条に定めるお問い合わせ窓口まで書面または電子メールにてお申し出ください。なお、当社所定の手数料が発生する場合があります。</p>
+          </article>
+
+          <!-- Article 08 -->
+          <article class="pp-article" id="article-08">
+            <div class="pp-article__eyebrow">Article 08</div>
+            <h2 class="pp-article__title">個人情報保護管理者</h2>
+            <p>当社は、個人情報の適切な管理を徹底するため、以下のとおり個人情報保護管理者を定めています。</p>
+            <div class="pp-contact-box">
+              <strong>個人情報保護管理者</strong>
+              株式会社ZENITH　代表取締役　竹藤 裕志
+            </div>
+          </article>
+
+          <!-- Article 09 -->
+          <article class="pp-article" id="article-09">
+            <div class="pp-article__eyebrow">Article 09</div>
+            <h2 class="pp-article__title">お問い合わせ窓口</h2>
+            <p>本プライバシーポリシーに関するご意見・ご質問、個人情報の開示等のご請求は、以下の窓口までご連絡ください。</p>
+            <div class="pp-contact-box">
+              <strong>個人情報お問い合わせ窓口</strong>
+              株式会社ZENITH　個人情報保護管理担当<br />
+              〒530-0015 大阪市北区中崎西一丁目8番24号 アインズビル梅田901<br />
+              E-mail：<a href="mailto:info@zenith-jp.co.jp">info@zenith-jp.co.jp</a><br />
+              受付時間：平日 <span class="en">10:00</span> – <span class="en">21:00</span>（土日祝応相談）
+            </div>
+          </article>
+
+          <!-- Article 10 -->
+          <article class="pp-article" id="article-10">
+            <div class="pp-article__eyebrow">Article 10</div>
+            <h2 class="pp-article__title">改定について</h2>
+            <p>当社は、法令の改正その他事業の変化に応じて、本プライバシーポリシーを適宜見直し、改善することがあります。変更後のプライバシーポリシーは、当社ウェブサイトに掲載した時点から効力を生じるものとします。重要な変更の場合には、適切な方法によりお知らせいたします。</p>
+          </article>
+
+          <p class="pp-sign">
+            制定：<span class="en">2026</span>年<span class="en">4</span>月<span class="en">7</span>日<br />
+            <strong>株式会社ZENITH　代表取締役　竹藤 裕志</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="株式会社ZENITH" class="footer__logo" />
+        <div class="footer__company">株式会社ZENITH</div>
+        <div class="footer__meta">
+          〒530-0015<br />
+          大阪市北区中崎西一丁目8番24号<br />
+          アインズビル梅田901<br />
+          会社法人等番号 1200-01-285699
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Sitemap</h3>
+        <ul class="footer__links">
+          <li><a href="clients.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>店舗様ページ</a></li>
+          <li><a href="cast.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>女の子用ページ</a></li>
+          <li><a href="company.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>会社概要</a></li>
+          <li><a href="contact.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Compliance</h3>
+        <ul class="footer__links">
+          <li><a href="privacy.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>プライバシーポリシー</a></li>
+          <li><a href="privacy.html#personal" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>個人情報の取扱について</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copy">© <span data-year>2026</span> <span class="en">ZENITH Inc.</span> All rights reserved.</div>
+      <div class="footer__copy en">NIGHTWORK PLACEMENT AGENCY · OSAKA</div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" type="button" aria-label="ページ上部へ戻る">
+  <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_up</span>
+</button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

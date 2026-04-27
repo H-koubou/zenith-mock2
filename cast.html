@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>女の子用ページ｜株式会社ZENITH</title>
+<meta name="description" content="大阪・北新地／ミナミ／梅田のナイトワーク専門職業紹介。未経験の方も経験者の方も、秘密厳守で担当者が親身にサポート。体験入店保証あり、ご利用はすべて無料です。" />
+<meta name="keywords" content="ナイトワーク,求人,女性,キャバクラ,クラブ,ラウンジ,北新地,ミナミ,梅田,未経験,体験入店" />
+
+<!-- OGP -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="女の子用ページ｜株式会社ZENITH" />
+<meta property="og:description" content="あなたに合ったお店を、丁寧にご紹介。担当者が親身にサポートいたします。" />
+<meta property="og:site_name" content="株式会社ZENITH" />
+<meta name="theme-color" content="#2FA9E0" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css" />
+
+<link rel="icon" href="assets/images/logo.png" />
+
+<!-- Page-scoped styles -->
+<style>
+  /* ==== Sub-page hero (shorter than top) ==== */
+  body.page-cast .subhero {
+    position: relative;
+    padding-top: calc(var(--nav-h) + 48px);
+    padding-bottom: clamp(48px, 7vw, 88px);
+    background:
+      radial-gradient(800px 400px at 90% -10%, #CFE8F6 0%, transparent 60%),
+      radial-gradient(700px 380px at 5% 110%, #FDEEEE 0%, transparent 60%),
+      linear-gradient(180deg, #F5FAFD 0%, #FFFFFF 100%);
+    overflow: hidden;
+  }
+  body.page-cast .subhero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: var(--damask);
+    background-size: 110px 110px;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+  body.page-cast .subhero__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  body.page-cast .subhero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: var(--r-pill);
+    background: #fff;
+    border: 1px solid var(--c-border);
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: var(--c-primary-dark);
+    box-shadow: var(--sh-xs);
+    margin-bottom: 22px;
+  }
+  body.page-cast .subhero__eyebrow .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--c-coral);
+    box-shadow: 0 0 0 4px rgba(243,138,138,0.18);
+  }
+  body.page-cast .subhero__title {
+    font-size: clamp(26px, 4.4vw, 44px);
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    color: var(--c-ink);
+    margin-bottom: 20px;
+  }
+  body.page-cast .subhero__title .accent-coral { color: var(--c-coral-dark); }
+  body.page-cast .subhero__sub {
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: var(--c-ink-2);
+    line-height: 2;
+    margin-bottom: 26px;
+    max-width: 540px;
+  }
+  body.page-cast .subhero__areas {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 28px;
+  }
+  body.page-cast .subhero__ctas {
+    display: flex; flex-wrap: wrap; gap: 14px;
+  }
+  body.page-cast .subhero__cert {
+    position: relative; z-index: 1;
+    justify-self: center; width: 100%;
+    max-width: 380px;
+  }
+
+  /* ==== Area/Job-type block ==== */
+  body.page-cast .jobtypes {
+    display: flex; flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  body.page-cast .jobtypes .chip {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  /* ==== Testimonial card customization ==== */
+  body.page-cast .testimonial {
+    display: flex; flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+  body.page-cast .testimonial__quote-mark {
+    font-family: var(--ff-en);
+    font-size: 56px;
+    line-height: 1;
+    color: var(--c-coral);
+    opacity: 0.5;
+    font-weight: 700;
+  }
+  body.page-cast .testimonial__body {
+    font-size: 14px;
+    line-height: 1.95;
+    color: var(--c-ink-2);
+  }
+  body.page-cast .testimonial__foot {
+    display: flex; align-items: center; gap: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--c-border-soft);
+    margin-top: auto;
+  }
+  body.page-cast .testimonial__avatar {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    padding: 3px;
+    background: linear-gradient(135deg, #7AC5E6, var(--c-primary));
+    box-shadow: 0 6px 16px -8px rgba(47,169,224,0.4);
+  }
+  body.page-cast .testimonial__avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    border: 2px solid #fff;
+  }
+  body.page-cast .testimonial__avatar--1 { background: linear-gradient(135deg, #F6AEAE, var(--c-coral)); }
+  body.page-cast .testimonial__avatar--2 { background: linear-gradient(135deg, #7AC5E6, var(--c-primary)); }
+  body.page-cast .testimonial__avatar--3 { background: linear-gradient(135deg, #F3CB7A, var(--c-gold)); }
+
+  /* ==== Sub-hero photo collage (replaces plain cert card) ==== */
+  body.page-cast .subhero__photos {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    min-height: 360px;
+    margin-inline: auto;
+  }
+  body.page-cast .subhero__photos-main,
+  body.page-cast .subhero__photos-sub {
+    position: absolute;
+    border-radius: 9999px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 20px 40px -18px rgba(47,169,224,0.35), 0 8px 20px -12px rgba(243,138,138,0.25);
+    border: 4px solid #fff;
+  }
+  body.page-cast .subhero__photos-main {
+    width: 250px; height: 250px;
+    top: 30px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  body.page-cast .subhero__photos-sub--1 {
+    width: 120px; height: 120px;
+    top: 0; right: 4%;
+    z-index: 3;
+  }
+  body.page-cast .subhero__photos-sub--2 {
+    width: 140px; height: 140px;
+    bottom: 4%; left: 2%;
+    z-index: 3;
+  }
+  body.page-cast .subhero__photos img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  body.page-cast .subhero__photos-badge {
+    position: absolute;
+    bottom: 10px; right: 4%;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #F38A8A, #EF6F6F);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    box-shadow: 0 10px 24px -10px rgba(243,138,138,0.6);
+  }
+  body.page-cast .subhero__photos-badge .material-symbols-rounded { font-size: 16px; }
+
+  /* ==== Benefits supporting photo ==== */
+  body.page-cast .benefits__photo {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 48px -24px rgba(47,169,224,0.32);
+    border: 1px solid rgba(47,169,224,0.1);
+  }
+  body.page-cast .benefits__photo img {
+    width: 100%; height: 280px;
+    object-fit: cover;
+    display: block;
+  }
+  body.page-cast .benefits__photo-cap {
+    position: absolute;
+    left: 24px; bottom: 20px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--c-ink);
+    backdrop-filter: blur(6px);
+  }
+  @media (max-width: 768px) {
+    body.page-cast .subhero__photos { min-height: 300px; max-width: 320px; }
+    body.page-cast .subhero__photos-main { width: 200px; height: 200px; }
+    body.page-cast .subhero__photos-sub--1 { width: 100px; height: 100px; }
+    body.page-cast .subhero__photos-sub--2 { width: 115px; height: 115px; }
+    body.page-cast .benefits__photo img { height: 200px; }
+  }
+  body.page-cast .testimonial__name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-ink);
+    letter-spacing: 0.06em;
+  }
+  body.page-cast .testimonial__meta {
+    font-size: 12px;
+    color: var(--c-ink-3);
+  }
+
+  /* ==== Benefits 4-grid row (2x2 on larger, 1col on mobile) ==== */
+  body.page-cast .benefits .card {
+    text-align: left;
+  }
+  body.page-cast .benefits .card__icon {
+    margin-inline: 0;
+  }
+
+  /* Responsive overrides */
+  @media (max-width: 1024px) {
+    body.page-cast .subhero__inner { grid-template-columns: 1fr; }
+    body.page-cast .subhero__cert { max-width: 420px; margin-inline: auto; }
+  }
+  @media (max-width: 768px) {
+    body.page-cast .subhero__ctas .btn { flex: 1 1 auto; }
+  }
+</style>
+</head>
+<body class="page-cast">
+
+<!-- =========================================================================
+     Navbar
+     ========================================================================= -->
+<header class="navbar" role="banner">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="株式会社ZENITH トップページ">
+      <img src="assets/images/logo.png" alt="株式会社ZENITH" class="navbar__logo-img" />
+      <span class="navbar__wordmark">
+        <span class="navbar__wordmark-en">ZENITH</span>
+        <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+      </span>
+    </a>
+
+    <nav class="navbar__menu" aria-label="メインナビゲーション">
+      <a href="clients.html" class="navbar__link">店舗様ページ</a>
+      <a href="cast.html" class="navbar__link is-active" aria-current="page">女の子用ページ</a>
+      <a href="company.html" class="navbar__link">会社概要</a>
+      <a href="contact.html" class="navbar__link">お問い合わせ</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn--primary navbar__cta">
+      <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+      体験入店お申込み
+    </a>
+
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+      <span class="hamburger__box" aria-hidden="true">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </span>
+    </button>
+  </div>
+</header>
+
+<!-- Drawer (mobile) -->
+<div class="drawer-backdrop" aria-hidden="true"></div>
+<aside id="drawer" class="drawer" aria-label="モバイルメニュー">
+  <div class="drawer__head">
+    <span class="navbar__wordmark">
+      <span class="navbar__wordmark-en">ZENITH</span>
+      <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+    </span>
+    <button class="drawer__close" type="button" aria-label="メニューを閉じる">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+  </div>
+  <nav class="drawer__menu" aria-label="モバイルナビゲーション">
+    <a href="clients.html" class="drawer__link"><span class="material-symbols-rounded">storefront</span>店舗様ページ</a>
+    <a href="cast.html" class="drawer__link" aria-current="page"><span class="material-symbols-rounded">diamond</span>女の子用ページ</a>
+    <a href="company.html" class="drawer__link"><span class="material-symbols-rounded">apartment</span>会社概要</a>
+    <a href="contact.html" class="drawer__link"><span class="material-symbols-rounded">mail</span>お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--primary btn--block drawer__cta">
+    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+    体験入店お申込み
+  </a>
+</aside>
+
+<main id="main">
+
+<!-- =========================================================================
+     Sub-page Hero
+     ========================================================================= -->
+<section class="subhero" aria-label="ページヘッダー">
+  <div class="container subhero__inner">
+    <div class="subhero__content">
+      <span class="subhero__eyebrow reveal">
+        <span class="dot" aria-hidden="true"></span>
+        <span>CAST</span>
+      </span>
+      <h1 class="subhero__title reveal reveal--delay-1">
+        あなたに合ったお店を、<br />
+        <span class="accent-coral">丁寧</span>にご紹介。
+      </h1>
+      <p class="subhero__sub reveal reveal--delay-2">
+        初めての方も、経験者の方も。<br />
+        担当者が親身に、あなたのご希望を<br />
+        丁寧におうかがいします。
+      </p>
+
+      <div class="subhero__areas reveal reveal--delay-3">
+        <span class="chip chip--area">北新地</span>
+        <span class="chip chip--area">ミナミ</span>
+        <span class="chip chip--area">梅田</span>
+      </div>
+
+      <div class="subhero__ctas reveal reveal--delay-4">
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          <span class="material-symbols-rounded" aria-hidden="true">edit_note</span>
+          無料カウンセリングを申し込む
+        </a>
+        <a href="#wages" class="btn btn--outline btn--lg">
+          <span class="material-symbols-rounded" aria-hidden="true">payments</span>
+          お店の時給相場を見る
+        </a>
+      </div>
+    </div>
+
+    <div class="subhero__cert reveal reveal--delay-2">
+      <div class="subhero__photos">
+        <div class="subhero__photos-main">
+          <img src="assets/images/people/portrait-warm.jpg" alt="温かな笑顔の女性" loading="eager" />
+        </div>
+        <div class="subhero__photos-sub subhero__photos-sub--1">
+          <img src="assets/images/people/portrait-glasses.jpg" alt="親しみやすい雰囲気の女性" loading="eager" />
+        </div>
+        <div class="subhero__photos-sub subhero__photos-sub--2">
+          <img src="assets/images/people/portrait-casual-01.jpg" alt="カジュアルで自然体の女性" loading="eager" />
+        </div>
+        <span class="subhero__photos-badge">
+          <span class="material-symbols-rounded" aria-hidden="true">shield_lock</span>
+          秘密厳守
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ② ZENITHに任せるメリット
+     ========================================================================= -->
+<section class="section section--alt benefits" id="benefits" aria-labelledby="benefits-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Why ZENITH</span>
+      <h2 id="benefits-title" class="section__title reveal reveal--delay-1">
+        ZENITHに任せる<span>4つのメリット</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        初めての方にも安心していただけるよう、<br />
+        お仕事スタートから継続までを丁寧にサポートいたします。
+      </p>
+    </header>
+
+    <div class="grid grid--4">
+      <article class="card card--trust reveal">
+        <div class="card__icon"><span class="material-symbols-rounded">volunteer_activism</span></div>
+        <h3 class="card__title">未経験者さん大歓迎</h3>
+        <p class="card__body">ヒアリングから体験入店まで、経験豊富な担当者が丁寧にサポート。不安なことは何でもご相談ください。</p>
+      </article>
+
+      <article class="card card--trust reveal reveal--delay-1">
+        <div class="card__icon"><span class="material-symbols-rounded">lock_person</span></div>
+        <h3 class="card__title">個人情報厳守</h3>
+        <p class="card__body">ご登録情報は当社内で厳重に管理。ご友人・ご家族にバレる心配はありませんので、安心してご相談いただけます。</p>
+      </article>
+
+      <article class="card card--trust reveal reveal--delay-2">
+        <div class="card__icon"><span class="material-symbols-rounded">savings</span></div>
+        <h3 class="card__title">完全無料でご利用可能</h3>
+        <p class="card__body">ご登録も、お店のご紹介も、お仕事のご相談もすべて無料。費用は一切いただきません。</p>
+      </article>
+
+      <article class="card card--trust reveal reveal--delay-3">
+        <div class="card__icon"><span class="material-symbols-rounded">verified</span></div>
+        <h3 class="card__title">体験入店保証あり</h3>
+        <p class="card__body">お店の雰囲気を確認してから本入店を決められます。合わなければ別のお店もご紹介いたしますので、ご安心ください。</p>
+      </article>
+    </div>
+
+    <figure class="benefits__photo reveal">
+      <img src="assets/images/people/team-warm.jpg" alt="仲間と過ごす明るい職場の雰囲気" loading="lazy" />
+      <figcaption class="benefits__photo-cap">あなたらしく、安心して。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ③ 対応エリア・業態
+     ========================================================================= -->
+<section class="section" id="areas" aria-labelledby="areas-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Areas & Jobs</span>
+      <h2 id="areas-title" class="section__title reveal reveal--delay-1">
+        対応エリア・<span>お仕事の種類</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        大阪の主要3エリアで、幅広いジャンルのお店をご紹介しています。
+      </p>
+    </header>
+
+    <div class="grid grid--3">
+      <a href="contact.html?area=kitashinchi" class="area-card reveal" aria-label="北新地エリアのご相談">
+        <div class="area-card__en">KITASHINCHI</div>
+        <div class="area-card__name">北新地</div>
+        <p class="area-card__desc">大阪屈指の高級エリア。<br />高級クラブ・ラウンジが中心です。</p>
+        <span class="area-card__cta">
+          北新地で相談する
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+        </span>
+      </a>
+
+      <a href="contact.html?area=minami" class="area-card reveal reveal--delay-1" aria-label="ミナミエリアのご相談">
+        <div class="area-card__en">MINAMI</div>
+        <div class="area-card__name">ミナミ</div>
+        <p class="area-card__desc">若い世代に人気の活気あるエリア。<br />キャバクラ・ラウンジが豊富です。</p>
+        <span class="area-card__cta">
+          ミナミで相談する
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+        </span>
+      </a>
+
+      <a href="contact.html?area=umeda" class="area-card reveal reveal--delay-2" aria-label="梅田エリアのご相談">
+        <div class="area-card__en">UMEDA</div>
+        <div class="area-card__name">梅田</div>
+        <p class="area-card__desc">アクセス良好な大阪北の中心。<br />幅広い業態が揃っています。</p>
+        <span class="area-card__cta">
+          梅田で相談する
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="jobtypes reveal reveal--delay-3" aria-label="お仕事の種類">
+      <span class="chip chip--area">クラブ</span>
+      <span class="chip chip--area">ラウンジ</span>
+      <span class="chip chip--area">スナック</span>
+      <span class="chip chip--area">キャバクラ</span>
+      <span class="chip chip--area">ガールズバー</span>
+      <span class="chip chip--area">コンカフェ</span>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ④ お店の平均時給
+     ========================================================================= -->
+<section class="section section--tint" id="wages" aria-labelledby="wages-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Hourly Wage</span>
+      <h2 id="wages-title" class="section__title reveal reveal--delay-1">
+        お店の<span>平均時給</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        業態ごとのおおよその時給目安をご紹介します。<br />
+        ご経験・ご希望に合わせて、最適なお店をご提案いたします。
+      </p>
+    </header>
+
+    <div class="grid grid--3">
+      <article class="wage-card reveal">
+        <div class="wage-card__label">ラウンジ・スナック</div>
+        <div class="wage-card__sub">Lounge / Snack</div>
+        <div class="wage-card__value">
+          <span class="wage-card__prefix">平均時給</span>
+          <span class="wage-card__num en">3,000</span>
+          <span class="wage-card__unit">円</span>
+        </div>
+      </article>
+
+      <article class="wage-card reveal reveal--delay-1">
+        <div class="wage-card__label">クラブ・大型ラウンジ</div>
+        <div class="wage-card__sub">Club / Large Lounge</div>
+        <div class="wage-card__value">
+          <span class="wage-card__prefix">平均時給</span>
+          <span class="wage-card__num en">4,000</span>
+          <span class="wage-card__unit">円</span>
+        </div>
+      </article>
+
+      <article class="wage-card reveal reveal--delay-2">
+        <div class="wage-card__label">キャバクラ</div>
+        <div class="wage-card__sub">Cabaret Club</div>
+        <div class="wage-card__value">
+          <span class="wage-card__prefix">平均時給</span>
+          <span class="wage-card__num en">3,500</span>
+          <span class="wage-card__unit">円〜</span>
+        </div>
+      </article>
+
+      <article class="wage-card reveal reveal--delay-3">
+        <div class="wage-card__label">ガールズバー</div>
+        <div class="wage-card__sub">Girls Bar</div>
+        <div class="wage-card__value">
+          <span class="wage-card__prefix">平均時給</span>
+          <span class="wage-card__num en">2,500</span>
+          <span class="wage-card__unit">円〜</span>
+        </div>
+      </article>
+
+      <article class="wage-card reveal reveal--delay-4">
+        <div class="wage-card__label">コンカフェ</div>
+        <div class="wage-card__sub">Concept Cafe</div>
+        <div class="wage-card__value">
+          <span class="wage-card__prefix">平均時給</span>
+          <span class="wage-card__num en">2,000</span>
+          <span class="wage-card__unit">円〜</span>
+        </div>
+      </article>
+    </div>
+
+    <p class="wage-note reveal reveal--delay-3">
+      ※経験・指名・ノルマ達成等により変動いたします。詳細は担当者へお気軽にお問い合わせください。
+    </p>
+
+    <div class="wage-bonus reveal reveal--delay-4">
+      <span class="material-symbols-rounded" aria-hidden="true">redeem</span>
+      <span>体験入店時の給与保証あり・面接交通費も当社が負担いたします。</span>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ⑤ ご利用の流れ
+     ========================================================================= -->
+<section class="section" id="flow" aria-labelledby="flow-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Process</span>
+      <h2 id="flow-title" class="section__title reveal reveal--delay-1">
+        ご利用の<span>流れ</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        お問い合わせから本入店・継続サポートまで、<br />
+        各ステップを専任の担当者がしっかりサポートいたします。
+      </p>
+    </header>
+
+    <ol class="step-flow">
+      <li class="step reveal">
+        <div class="step__num en">01</div>
+        <div class="step__icon"><span class="material-symbols-rounded">mail</span></div>
+        <h3 class="step__title">お問い合わせ・ご登録</h3>
+        <p class="step__body">LINE・フォーム・お電話から、ご希望の方法でお気軽にご連絡ください。</p>
+      </li>
+      <li class="step reveal reveal--delay-1">
+        <div class="step__num en">02</div>
+        <div class="step__icon"><span class="material-symbols-rounded">chat</span></div>
+        <h3 class="step__title">カウンセリング</h3>
+        <p class="step__body">オンラインまたは対面で、ご希望・条件を丁寧にヒアリングいたします。</p>
+      </li>
+      <li class="step reveal reveal--delay-2">
+        <div class="step__num en">03</div>
+        <div class="step__icon"><span class="material-symbols-rounded">storefront</span></div>
+        <h3 class="step__title">お店のご紹介</h3>
+        <p class="step__body">条件に合った優良店舗を2〜3店舗候補としてご提案いたします。</p>
+      </li>
+      <li class="step reveal reveal--delay-3">
+        <div class="step__num en">04</div>
+        <div class="step__icon"><span class="material-symbols-rounded">verified</span></div>
+        <h3 class="step__title">体験入店</h3>
+        <p class="step__body">無料・給与保証ありで、お店の雰囲気を実際に確認できます。</p>
+      </li>
+      <li class="step reveal reveal--delay-4">
+        <div class="step__num en">05</div>
+        <div class="step__icon"><span class="material-symbols-rounded">favorite</span></div>
+        <h3 class="step__title">本入店・継続サポート</h3>
+        <p class="step__body">納得いただいた上でお仕事スタート。入店後もご相談を承ります。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ⑥ 働く女性の声
+     ========================================================================= -->
+<section class="section section--alt" id="voices" aria-labelledby="voices-title">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">Voices</span>
+      <h2 id="voices-title" class="section__title reveal reveal--delay-1">
+        働く女性の<span>声</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        実際にZENITHを通じてお仕事をされている方々の声をご紹介します。
+      </p>
+    </header>
+
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <div class="testimonial">
+          <span class="testimonial__quote-mark en" aria-hidden="true">“</span>
+          <p class="testimonial__body">学費のために始めました。はじめは不安でしたが、担当の方がずっと丁寧に寄り添ってくださって、少しずつ不安が消えていきました。今は自分のペースで続けられています。</p>
+          <div class="testimonial__foot">
+            <span class="testimonial__avatar testimonial__avatar--1" aria-hidden="true">
+              <img src="assets/images/people/staff-smile-01.jpg" alt="" loading="lazy" />
+            </span>
+            <div>
+              <div class="testimonial__name">Hさん</div>
+              <div class="testimonial__meta">20代 / 大学生</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal--delay-1">
+        <div class="testimonial">
+          <span class="testimonial__quote-mark en" aria-hidden="true">“</span>
+          <p class="testimonial__body">昼職からの副業としてスタート。最初は週1日だけのつもりが、働きやすい環境とお客様との会話が楽しくて、今は本業にしています。無理のないシフトで相談できるのが助かります。</p>
+          <div class="testimonial__foot">
+            <span class="testimonial__avatar testimonial__avatar--2" aria-hidden="true">
+              <img src="assets/images/people/portrait-japanese.jpg" alt="" loading="lazy" />
+            </span>
+            <div>
+              <div class="testimonial__name">Mさん</div>
+              <div class="testimonial__meta">20代 / 元OL</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal--delay-2">
+        <div class="testimonial">
+          <span class="testimonial__quote-mark en" aria-hidden="true">“</span>
+          <p class="testimonial__body">子供との時間を大切にしたくて、短時間・高時給で働ける環境を探していました。担当の方が家庭の事情まで理解してくれて、しっかり稼げるお店を紹介してもらえました。</p>
+          <div class="testimonial__foot">
+            <span class="testimonial__avatar testimonial__avatar--3" aria-hidden="true">
+              <img src="assets/images/people/portrait-cafe.jpg" alt="" loading="lazy" />
+            </span>
+            <div>
+              <div class="testimonial__name">Sさん</div>
+              <div class="testimonial__meta">30代 / シングルマザー</div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ⑦ FAQ
+     ========================================================================= -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container container--narrow">
+    <header class="section__header">
+      <span class="section__eyebrow reveal">FAQ</span>
+      <h2 id="faq-title" class="section__title reveal reveal--delay-1">
+        よくある<span>ご質問</span>
+      </h2>
+      <p class="section__lead reveal reveal--delay-2">
+        ご登録前によくいただくご質問をまとめました。<br />
+        こちらに載っていないご質問もお気軽にお問い合わせください。
+      </p>
+    </header>
+
+    <div class="accordion" role="list">
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">本当に無料で利用できますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>はい、ご登録からお店のご紹介、体験入店、就業後のご相談まで、すべて完全無料でご利用いただけます。面接や体験入店の際の交通費も当社が負担いたします。料金が発生することは一切ございません。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">未経験でも大丈夫ですか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>ご登録者の約7割が未経験スタートの方です。接客経験がなくても、お店のスタッフが一から丁寧に教えてくださる環境をご紹介しますのでご安心ください。担当者からも事前に心構えやコツをお伝えいたします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">家族や友人にバレませんか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>ご登録情報はプライバシーポリシーに基づき厳重に管理し、ご本人の同意なく第三者へ共有することはありません。源泉徴収・住民税など税務面の配慮についても、ご希望に応じて担当者が一緒に考えさせていただきます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">送迎や交通費は出ますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>多くの契約店舗様で送迎サービスや交通費支給の制度をご利用いただけます。ご自宅やご希望のエリアから通いやすい条件のお店を、担当者が事前に確認のうえご提案いたします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">お店選びは担当者任せになりますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>いいえ、あくまでご本人の意思を最優先にご提案いたします。ご希望条件に合った候補を2〜3店舗ご紹介し、最終的にどのお店で体験・本入店されるかはご自身でお選びいただけます。合わないと感じた場合は何度でも別のお店をご紹介いたします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item reveal" role="listitem">
+        <button type="button" class="accordion__head" aria-expanded="false">
+          <span class="accordion__q en">Q</span>
+          <span class="accordion__title">他のお仕事との掛け持ちはできますか？</span>
+          <span class="accordion__toggle" aria-hidden="true"><span class="material-symbols-rounded">expand_more</span></span>
+        </button>
+        <div class="accordion__body">
+          <div class="accordion__body-inner">
+            <span class="accordion__a en">A</span>
+            <p>もちろん可能です。本業・学業・育児との両立を前提に、週1日・短時間勤務OKのお店もご紹介できます。無理のないスケジュールを一緒に考えさせていただきますので、ご希望を遠慮なくお伝えください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     ⑧ Contact CTA
+     ========================================================================= -->
+<section class="contact-cta" aria-labelledby="cta-title">
+  <div class="container contact-cta__inner">
+    <h2 id="cta-title" class="contact-cta__title reveal">
+      迷ったら、<span style="color:var(--c-primary-dark);">まずはご相談を。</span>
+    </h2>
+    <p class="contact-cta__sub reveal reveal--delay-1">
+      担当者がLINE・メール・お電話で、ご質問に丁寧にお答えします。
+    </p>
+    <div class="contact-cta__ctas reveal reveal--delay-2">
+      <a href="contact.html" class="btn btn--primary btn--lg">
+        <span class="material-symbols-rounded" aria-hidden="true">edit_note</span>
+        無料登録する
+      </a>
+      <a href="#" class="btn btn--outline btn--lg">
+        <span class="material-symbols-rounded" aria-hidden="true">chat</span>
+        LINEで相談する
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================================
+     Footer
+     ========================================================================= -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="株式会社ZENITH" class="footer__logo" />
+        <div class="footer__company">株式会社ZENITH</div>
+        <div class="footer__meta">
+          〒530-0015<br />
+          大阪市北区中崎西一丁目8番24号<br />
+          アインズビル梅田901<br />
+          会社法人等番号 1200-01-285699
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Sitemap</h3>
+        <ul class="footer__links">
+          <li><a href="clients.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>店舗様ページ</a></li>
+          <li><a href="cast.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>女の子用ページ</a></li>
+          <li><a href="company.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>会社概要</a></li>
+          <li><a href="contact.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Compliance</h3>
+        <ul class="footer__links">
+          <li><a href="privacy.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>プライバシーポリシー</a></li>
+          <li><a href="privacy.html#personal" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>個人情報の取扱について</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copy">© <span data-year>2026</span> <span class="en">ZENITH Inc.</span> All rights reserved.</div>
+      <div class="footer__copy en">NIGHTWORK PLACEMENT AGENCY · OSAKA</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" type="button" aria-label="ページ上部へ戻る">
+  <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_up</span>
+</button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

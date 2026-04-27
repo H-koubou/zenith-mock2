@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>会社概要 | 株式会社ZENITH</title>
+<meta name="description" content="株式会社ZENITHの会社概要。大阪・梅田を拠点に、ナイトワーク専門の職業紹介事業を展開。商号・所在地・代表者・事業内容・アクセスなど、会社情報をご案内いたします。" />
+<meta name="keywords" content="株式会社ZENITH,会社概要,企業情報,職業紹介,ナイトワーク,大阪,梅田" />
+
+<!-- OGP -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="会社概要 | 株式会社ZENITH" />
+<meta property="og:description" content="信頼と誠実を、私たちのすべてに。株式会社ZENITHの会社概要・事業内容・アクセス情報。" />
+<meta property="og:site_name" content="株式会社ZENITH" />
+<meta name="theme-color" content="#2FA9E0" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css" />
+
+<link rel="icon" href="assets/images/logo.png" />
+
+<!-- Page-scoped styles -->
+<style>
+  /* Sub-hero */
+  .page-company .subhero {
+    position: relative;
+    padding-top: calc(var(--nav-h) + 56px);
+    padding-bottom: clamp(40px, 6vw, 72px);
+    background:
+      radial-gradient(900px 450px at 90% -10%, #CFE8F6 0%, transparent 60%),
+      radial-gradient(700px 360px at 0% 110%, #FDEEEE 0%, transparent 60%),
+      linear-gradient(180deg, #F5FAFD 0%, #FFFFFF 100%);
+    overflow: hidden;
+  }
+  .page-company .subhero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: var(--damask);
+    background-size: 110px 110px;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+  .page-company .subhero__inner { position: relative; z-index: 1; text-align: center; }
+  .page-company .subhero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--c-primary);
+    margin-bottom: 14px;
+  }
+  .page-company .subhero__eyebrow::before,
+  .page-company .subhero__eyebrow::after {
+    content: '';
+    width: 32px; height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+  .page-company .subhero__title {
+    font-size: clamp(28px, 4.4vw, 44px);
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    color: var(--c-ink);
+    margin-bottom: 16px;
+  }
+  .page-company .subhero__sub {
+    font-size: clamp(14px, 1.4vw, 16px);
+    color: var(--c-ink-2);
+    letter-spacing: 0.08em;
+  }
+
+  /* Mission / Vision cards */
+  .page-company .mv-card {
+    position: relative;
+    padding: 40px 36px 36px 48px;
+    background: #fff;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--c-border-soft);
+    box-shadow: var(--sh-sm);
+    overflow: hidden;
+    transition: transform var(--t-med) var(--ease-out), box-shadow var(--t-med) var(--ease-out);
+  }
+  .page-company .mv-card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
+  .page-company .mv-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 24px; bottom: 24px;
+    width: 6px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, var(--c-primary) 0%, var(--c-coral) 100%);
+  }
+  .page-company .mv-card__head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .page-company .mv-card__icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--c-primary-pale);
+    color: var(--c-primary-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .page-company .mv-card__icon .material-symbols-rounded { font-size: 28px; }
+  .page-company .mv-card__en {
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--c-primary);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .page-company .mv-card__label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--c-ink);
+  }
+  .page-company .mv-card__body {
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.8;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--c-ink);
+    margin-bottom: 12px;
+  }
+  .page-company .mv-card__desc {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--c-ink-2);
+  }
+
+  /* Info DL table */
+  .page-company .info-dl {
+    max-width: 880px;
+    margin-inline: auto;
+    background: #fff;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--c-border-soft);
+    box-shadow: var(--sh-sm);
+    overflow: hidden;
+  }
+  .page-company .info-dl__row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    border-bottom: 1px solid var(--c-border-soft);
+  }
+  .page-company .info-dl__row:last-child { border-bottom: 0; }
+  .page-company .info-dl__row dt {
+    position: relative;
+    padding: 20px 24px 20px 28px;
+    background: var(--c-surface-alt);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--c-ink);
+    display: flex;
+    align-items: center;
+  }
+  .page-company .info-dl__row dt::before {
+    content: '';
+    position: absolute;
+    left: 16px; top: 50%;
+    width: 4px; height: 24px;
+    background: var(--c-primary);
+    border-radius: 2px;
+    transform: translateY(-50%);
+  }
+  .page-company .info-dl__row dd {
+    padding: 20px 24px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--c-ink-2);
+  }
+  .page-company .info-dl__row dd .note {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    background: var(--c-gold-pale);
+    color: var(--c-gold-dark);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    border-radius: var(--r-pill);
+  }
+
+  /* Business list (numbered) */
+  .page-company .biz-list {
+    counter-reset: biz;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 960px;
+    margin-inline: auto;
+  }
+  .page-company .biz-list li {
+    counter-increment: biz;
+    position: relative;
+    padding: 18px 22px 18px 64px;
+    background: #fff;
+    border: 1px solid var(--c-border-soft);
+    border-radius: var(--r-md);
+    box-shadow: var(--sh-xs);
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--c-ink);
+    letter-spacing: 0.04em;
+    transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out);
+  }
+  .page-company .biz-list li:hover {
+    transform: translateY(-2px);
+    border-color: var(--c-border);
+    box-shadow: var(--sh-sm);
+  }
+  .page-company .biz-list li::before {
+    content: counter(biz, decimal-leading-zero);
+    position: absolute;
+    left: 18px; top: 50%;
+    transform: translateY(-50%);
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--c-primary-pale);
+    color: var(--c-primary-dark);
+    font-family: var(--ff-en);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Access map */
+  .page-company .access {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: stretch;
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+  .page-company .access__info {
+    background: #fff;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--c-border-soft);
+    box-shadow: var(--sh-sm);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page-company .access__row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .page-company .access__row-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--c-primary-pale);
+    color: var(--c-primary-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-company .access__row-icon .material-symbols-rounded { font-size: 22px; }
+  .page-company .access__row-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--c-primary-dark);
+    text-transform: uppercase;
+    font-family: var(--ff-en);
+    margin-bottom: 4px;
+  }
+  .page-company .access__row-value {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--c-ink);
+  }
+  .page-company .access__map {
+    position: relative;
+    min-height: 320px;
+    border-radius: var(--r-lg);
+    background:
+      radial-gradient(500px 260px at 30% 40%, rgba(47,169,224,0.18) 0%, transparent 70%),
+      linear-gradient(135deg, #E8F4FB 0%, #F7FBFD 100%);
+    border: 1px solid var(--c-border);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-company .access__map::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: var(--damask);
+    background-size: 90px 90px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .page-company .access__map-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+  }
+  .page-company .access__pin {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 28px rgba(47,169,224,0.24);
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .page-company .access__pin .material-symbols-rounded {
+    font-size: 40px;
+    color: var(--c-coral);
+  }
+  .page-company .access__pin::after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: -14px;
+    width: 14px; height: 14px;
+    background: #fff;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 6px 6px 14px rgba(47,169,224,0.12);
+  }
+  .page-company .access__map-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--c-ink);
+    margin-bottom: 4px;
+  }
+  .page-company .access__map-sub {
+    font-size: 12px;
+    color: var(--c-ink-2);
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .page-company .info-dl__row { grid-template-columns: 1fr; }
+    .page-company .info-dl__row dt { padding: 14px 20px 14px 28px; }
+    .page-company .info-dl__row dt::before { left: 14px; height: 16px; }
+    .page-company .info-dl__row dd { padding: 14px 20px; }
+    .page-company .biz-list { grid-template-columns: 1fr; }
+    .page-company .access { grid-template-columns: 1fr; }
+    .page-company .access__map { min-height: 280px; }
+    .page-company .mv-card { padding: 32px 24px 28px 36px; }
+    .page-company .mv-card__head { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+</style>
+</head>
+<body class="page-company">
+
+<!-- Navbar -->
+<header class="navbar" role="banner">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="株式会社ZENITH トップページ">
+      <img src="assets/images/logo.png" alt="株式会社ZENITH" class="navbar__logo-img" />
+      <span class="navbar__wordmark">
+        <span class="navbar__wordmark-en">ZENITH</span>
+        <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+      </span>
+    </a>
+
+    <nav class="navbar__menu" aria-label="メインナビゲーション">
+      <a href="clients.html" class="navbar__link">店舗様ページ</a>
+      <a href="cast.html" class="navbar__link">女の子用ページ</a>
+      <a href="company.html" class="navbar__link is-active" aria-current="page">会社概要</a>
+      <a href="contact.html" class="navbar__link">お問い合わせ</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn--primary navbar__cta">
+      <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+      体験入店お申込み
+    </a>
+
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+      <span class="hamburger__box" aria-hidden="true">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-backdrop" aria-hidden="true"></div>
+<aside id="drawer" class="drawer" aria-label="モバイルメニュー">
+  <div class="drawer__head">
+    <span class="navbar__wordmark">
+      <span class="navbar__wordmark-en">ZENITH</span>
+      <span class="navbar__wordmark-jp">株式会社ゼニス</span>
+    </span>
+    <button class="drawer__close" type="button" aria-label="メニューを閉じる">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+  </div>
+  <nav class="drawer__menu" aria-label="モバイルナビゲーション">
+    <a href="clients.html" class="drawer__link"><span class="material-symbols-rounded">storefront</span>店舗様ページ</a>
+    <a href="cast.html" class="drawer__link"><span class="material-symbols-rounded">diamond</span>女の子用ページ</a>
+    <a href="company.html" class="drawer__link"><span class="material-symbols-rounded">apartment</span>会社概要</a>
+    <a href="contact.html" class="drawer__link"><span class="material-symbols-rounded">mail</span>お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--primary btn--block drawer__cta">
+    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+    体験入店お申込み
+  </a>
+</aside>
+
+<main id="main">
+
+  <!-- Sub-hero -->
+  <section class="subhero" aria-label="ページタイトル">
+    <div class="container subhero__inner">
+      <span class="subhero__eyebrow reveal">COMPANY</span>
+      <h1 class="subhero__title reveal reveal--delay-1">会社概要</h1>
+      <p class="subhero__sub reveal reveal--delay-2">信頼と誠実を、私たちのすべてに。</p>
+    </div>
+  </section>
+
+  <!-- ① ミッション・ビジョン -->
+  <section class="section" id="mission" aria-labelledby="mission-title">
+    <div class="container">
+      <header class="section__header">
+        <span class="section__eyebrow reveal">Mission &amp; Vision</span>
+        <h2 id="mission-title" class="section__title reveal reveal--delay-1">私たちの<span>理念</span></h2>
+        <p class="section__lead reveal reveal--delay-2">
+          働く女性と信頼できる店舗様を、誠実にお繋ぎすること。<br />
+          それが、ZENITHの存在意義です。
+        </p>
+      </header>
+
+      <div class="grid grid--2">
+        <article class="mv-card reveal">
+          <div class="mv-card__head">
+            <div class="mv-card__icon" aria-hidden="true"><span class="material-symbols-rounded">flag</span></div>
+            <div>
+              <span class="mv-card__en">Mission</span>
+              <div class="mv-card__label">ミッション</div>
+            </div>
+          </div>
+          <p class="mv-card__body">人と仕事の最適な出会いを創出する</p>
+          <p class="mv-card__desc">誰もが安心して働ける環境の中で、一人ひとりの希望と店舗様のニーズを丁寧に結び、双方にとって価値のある出会いを生み出してまいります。</p>
+        </article>
+
+        <article class="mv-card reveal reveal--delay-1">
+          <div class="mv-card__head">
+            <div class="mv-card__icon" aria-hidden="true"><span class="material-symbols-rounded">visibility</span></div>
+            <div>
+              <span class="mv-card__en">Vision</span>
+              <div class="mv-card__label">ビジョン</div>
+            </div>
+          </div>
+          <p class="mv-card__body">働く女性にとって、最も信頼される人材紹介会社へ。</p>
+          <p class="mv-card__desc">法令遵守と透明性を徹底し、長く安心してご相談いただける存在であり続けること。私たちは、その実現に向けて日々邁進してまいります。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 会社情報 -->
+  <section class="section section--alt" id="info" aria-labelledby="info-title">
+    <div class="container">
+      <header class="section__header">
+        <span class="section__eyebrow reveal">Corporate Info</span>
+        <h2 id="info-title" class="section__title reveal reveal--delay-1">会社<span>情報</span></h2>
+        <p class="section__lead reveal reveal--delay-2">
+          株式会社ZENITHの基本情報をご案内いたします。
+        </p>
+      </header>
+
+      <dl class="info-dl reveal">
+        <div class="info-dl__row"><dt>商号</dt><dd>株式会社ZENITH</dd></div>
+        <div class="info-dl__row"><dt>所在地</dt><dd>〒530-0015 大阪市北区中崎西一丁目8番24号 アインズビル梅田901</dd></div>
+        <div class="info-dl__row"><dt>設立年月日</dt><dd><span class="en">2026</span>年<span class="en">4</span>月<span class="en">7</span>日</dd></div>
+        <div class="info-dl__row"><dt>資本金</dt><dd><span class="en">500</span>万円</dd></div>
+        <div class="info-dl__row"><dt>代表取締役</dt><dd>竹藤 裕志</dd></div>
+        <div class="info-dl__row"><dt>取締役</dt><dd>竹藤 裕志 / 灰谷 竜一</dd></div>
+        <div class="info-dl__row"><dt>会社法人等番号</dt><dd><span class="en">1200-01-285699</span></dd></div>
+        <div class="info-dl__row"><dt>事業年度</dt><dd>毎年<span class="en">3</span>月<span class="en">1</span>日 〜 翌年<span class="en">2</span>月末日</dd></div>
+        <div class="info-dl__row"><dt>許可・資格</dt><dd>厚生労働大臣許可 有料職業紹介事業<span class="note">2026年6月取得予定／現在申請中</span></dd></div>
+        <div class="info-dl__row"><dt>公告方法</dt><dd>官報掲載</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ③ 事業内容 -->
+  <section class="section" id="business" aria-labelledby="business-title">
+    <div class="container">
+      <header class="section__header">
+        <span class="section__eyebrow reveal">Business</span>
+        <h2 id="business-title" class="section__title reveal reveal--delay-1">事業<span>内容</span></h2>
+        <p class="section__lead reveal reveal--delay-2">
+          定款に記載する事業内容は以下のとおりです。
+        </p>
+      </header>
+
+      <ol class="biz-list reveal">
+        <li>労働者派遣事業及び職業紹介事業</li>
+        <li>人材採用に関するコンサルティング</li>
+        <li>人材育成及び教育研修事業</li>
+        <li>求人広告及び採用支援事業</li>
+        <li>経営コンサルティング業</li>
+        <li>各種イベント、セミナーの企画及び運営</li>
+        <li>インターネットを利用した情報提供サービス</li>
+        <li>飲食店の経営、運営及びコンサルティング</li>
+        <li>食品、飲料の企画、製造、販売及び輸出入</li>
+        <li>前各号に附帯関連する一切の事業</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ④ アクセス -->
+  <section class="section section--tint" id="access" aria-labelledby="access-title">
+    <div class="container">
+      <header class="section__header">
+        <span class="section__eyebrow reveal">Access</span>
+        <h2 id="access-title" class="section__title reveal reveal--delay-1">アクセス<span>情報</span></h2>
+        <p class="section__lead reveal reveal--delay-2">
+          大阪メトロ 谷町線「中崎町駅」徒歩約3分。<br />
+          梅田駅からも徒歩圏内の好立地です。
+        </p>
+      </header>
+
+      <div class="access reveal">
+        <div class="access__info">
+          <div class="access__row">
+            <div class="access__row-icon" aria-hidden="true"><span class="material-symbols-rounded">location_on</span></div>
+            <div>
+              <div class="access__row-label">Address</div>
+              <p class="access__row-value">〒530-0015<br />大阪市北区中崎西一丁目8番24号<br />アインズビル梅田901</p>
+            </div>
+          </div>
+
+          <div class="access__row">
+            <div class="access__row-icon" aria-hidden="true"><span class="material-symbols-rounded">directions_subway</span></div>
+            <div>
+              <div class="access__row-label">Nearest Station</div>
+              <p class="access__row-value">
+                大阪メトロ 谷町線「中崎町駅」 徒歩約<span class="en">3</span>分<br />
+                大阪メトロ 御堂筋線「梅田駅」 徒歩約<span class="en">5</span>分<br />
+                JR「大阪駅」 徒歩約<span class="en">8</span>分
+              </p>
+            </div>
+          </div>
+
+          <div class="access__row">
+            <div class="access__row-icon" aria-hidden="true"><span class="material-symbols-rounded">schedule</span></div>
+            <div>
+              <div class="access__row-label">Business Hours</div>
+              <p class="access__row-value">平日 <span class="en">10:00</span> – <span class="en">21:00</span>（土日祝応相談）</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="access__map" aria-label="地図プレースホルダー">
+          <div class="access__map-inner">
+            <div class="access__pin" aria-hidden="true">
+              <span class="material-symbols-rounded">place</span>
+            </div>
+            <div class="access__map-title">アインズビル梅田901</div>
+            <div class="access__map-sub">大阪市北区中崎西一丁目8番24号</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E4%B8%AD%E5%B4%8E%E8%A5%BF%E4%B8%80%E4%B8%81%E7%9B%AE8%E7%95%AA24%E5%8F%B7" target="_blank" rel="noopener" class="btn btn--outline">
+              <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
+              Google Mapsで開く
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta" aria-labelledby="cta-title">
+    <div class="container contact-cta__inner">
+      <h2 id="cta-title" class="contact-cta__title reveal">
+        まずはお気軽に、<span style="color:var(--c-primary-dark);">ご相談ください。</span>
+      </h2>
+      <p class="contact-cta__sub reveal reveal--delay-1">秘密厳守で、専任スタッフが丁寧に対応いたします。</p>
+      <div class="contact-cta__ctas reveal reveal--delay-2">
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          <span class="material-symbols-rounded" aria-hidden="true">edit_note</span>
+          無料登録する
+        </a>
+        <a href="tel:0000000000" class="btn btn--outline btn--lg">
+          <span class="material-symbols-rounded" aria-hidden="true">call</span>
+          お電話でご相談
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="株式会社ZENITH" class="footer__logo" />
+        <div class="footer__company">株式会社ZENITH</div>
+        <div class="footer__meta">
+          〒530-0015<br />
+          大阪市北区中崎西一丁目8番24号<br />
+          アインズビル梅田901<br />
+          会社法人等番号 1200-01-285699
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Sitemap</h3>
+        <ul class="footer__links">
+          <li><a href="clients.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>店舗様ページ</a></li>
+          <li><a href="cast.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>女の子用ページ</a></li>
+          <li><a href="company.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>会社概要</a></li>
+          <li><a href="contact.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Compliance</h3>
+        <ul class="footer__links">
+          <li><a href="privacy.html" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>プライバシーポリシー</a></li>
+          <li><a href="privacy.html#personal" class="footer__link"><span class="material-symbols-rounded">chevron_right</span>個人情報の取扱について</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copy">© <span data-year>2026</span> <span class="en">ZENITH Inc.</span> All rights reserved.</div>
+      <div class="footer__copy en">NIGHTWORK PLACEMENT AGENCY · OSAKA</div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" type="button" aria-label="ページ上部へ戻る">
+  <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_up</span>
+</button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
