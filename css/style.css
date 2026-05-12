@@ -987,15 +987,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .message__monogram-z {
   position: relative;
-  font-family: var(--ff-en);
-  font-weight: 600;
-  font-size: 180px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-align: right;
+  width: 60%;
+  max-width: 200px;
+  height: auto;
   margin-top: auto;
-  opacity: 0.95;
-  text-shadow: 0 6px 28px rgba(0,0,0,0.18);
+  margin-left: auto;
+  display: block;
+  opacity: 0.98;
+  filter: drop-shadow(0 6px 28px rgba(0,0,0,0.18));
 }
 .message__monogram-tag {
   position: relative;
@@ -1427,7 +1426,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .message { grid-template-columns: 1fr; gap: 28px; }
   .message__monogram { aspect-ratio: 16 / 9; max-height: 240px; }
-  .message__monogram-z { font-size: 120px; }
+  .message__monogram-z { width: 50%; max-width: 140px; }
 
   .footer__grid { grid-template-columns: 1fr; gap: 36px; }
 
